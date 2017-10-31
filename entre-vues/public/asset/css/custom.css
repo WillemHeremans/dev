@@ -1,0 +1,311 @@
+/*
+
+	- vert : #C7E200
+
+	- gris : #737373
+
+	- rouge : #CA0300
+
+	- blanc : white
+
+
+
+ */
+
+body {
+
+	font-family: Helvetica;
+	color: #737373;
+	line-height: 25px;
+	//background-image: url("../images/background.jpg");
+	background-color: #cccccc;
+
+}
+
+
+.container {
+	margin: auto;
+	display: flex;
+	overflow: scroll;
+
+
+}
+
+
+a {
+
+	color: #737373;
+	text-decoration: none;
+
+}
+
+a:hover {
+
+	color: #CA0300;
+	text-decoration: none;
+
+}
+
+
+
+nav {
+
+	font-size: 20px;
+	height: 120px;
+	background-color: #C7E200;;
+	width: 100%;
+	display: block;
+
+	//position:relative;
+
+
+
+}
+
+.header {
+	width: 960px;
+	margin: auto;
+	height: 100px;
+	padding-top: 10px;
+}
+
+p {
+	margin: 20px;
+	line-height: 25px;
+}
+
+
+h3 {
+
+	font-size: 18px;
+	font-weight: bold;
+
+}
+
+#navigation {
+	float: right;
+	bottom: 0px;
+	right: 60px;
+	//position:absolute;
+
+
+}
+
+#navigation li {
+  float: left ;
+  padding-right: 30px;
+  padding: 12px;
+  //border-right: 1px solid #FFF;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin:10px;
+    -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+
+}
+
+#navigation li a{
+
+  color: #fff ;
+
+}
+
+#navigation li a:hover{
+
+  color: #CA0300 ;
+
+}
+
+.logo {
+	height: 100%;
+
+}
+
+
+.content {
+
+	//width: 70%;
+
+	margin: 20px 150px 150px 150px;
+
+
+}
+
+
+
+.tabPDF {
+	width: 100%;
+}
+
+
+.tabPDF td  {
+	padding: 10px;
+}
+
+.tabPDF th  {
+	padding: 10px;
+}
+
+.tabPDF tr{
+	text-align: left;
+	border-bottom: 1px solid grey;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.8);
+
+
+}
+
+.tabPDF tr div {
+	  text-align: center;
+	  position: absolute;
+
+	  top: 50%; /* poussé de la moitié de hauteur du référent */
+	  transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+
+	}
+
+.tabPDF tr:nth-child(2n+1)  {
+
+	  background-color: rgba(0, 0, 0, 0.08);
+
+
+	}
+
+
+.suite {
+	text-align: center;
+	margin:50px;
+}
+
+
+
+
+
+.tabPDF th{
+	font-weight: bold;
+	padding-top: 25px;
+	//width: 25%;
+
+}
+
+.tabPDF td {
+	//;
+
+}
+
+.tabPDF a:hover{
+	color: #CA0300;
+}
+
+.recherche {
+
+	height: 80px;
+	text-align: center;
+
+
+}
+
+h1 {
+	//font-weight: bold;
+	font-size: 5em;
+	color: white;
+	font-family: 'Lobster', cursive;
+	display: block;
+	background-color: white;
+	padding: 23px;
+	padding-left: 200px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.31);
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 22px;
+	color: #CA0300;
+	margin-bottom: 15px;
+}
+
+.cover {
+	/*background-image: url("http://www.jeaconf.org/UploadedFiles/Images/20f44e77-c215-442d-a832-4efee7649bd1.jpg");*/
+	width: 100%;
+	height: 170px;
+	padding-top: 250px;
+	background-size: cover;
+	animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0%   {background-image: url('../images/payage.jpg');}
+    25%  {background-image: url('../images/Books1.jpeg');}
+    50%  {background-image: url('../images/libraries.jpg');}
+		75%  {background-image: url('../images/books.jpg');}
+    100%  {background-image: url('../images/bib.jpg');}
+}
+
+.btn_valid {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #ca0300;
+  padding: 10px 35px 10px 35px;
+  text-decoration: none;
+}
+
+.btn_valid:hover {
+  background: #CA0300;
+  text-decoration: none;
+}
+
+
+.right {
+	text-align: right;
+	float: right;
+	//width: 100%;
+}
+
+
+hr {
+	color: grey;
+	background-color: grey;
+}
+
+//Moteur de recherche
+//
+input {
+	  padding: 10px 35px 10px 35px;
+}
+
+.photo {
+
+	padding: 10px;
+	margin:  10px;
+	-webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+	border 1px red solid;
+	float: left;
+	background-color: #FFF;
+	font-size: 13px;
+
+
+}
+
+.photo img{
+	width: 150px;
+	height: 200px;
+
+}
+
+.titre_photo {
+	color: black;
+	font-weight: bold;
+
+}

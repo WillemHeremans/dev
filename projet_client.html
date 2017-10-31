@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./font/css/font-awesome.min.css">
+
+  <style media="screen">
+body {
+  margin:0;
+background-color: lightblue;}
+
+
+@media screen and (min-width: 680px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+
+  div.header{
+    border-bottom: solid 15px #730800;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+  }
+
+  div.container{
+    border: solid 5px yellow;
+    position: inherit;
+    width: 100%;
+    margin-top:165px;
+    margin-bottom:95px;
+
+  }
+
+  div.content{
+    border: solid 5px green;
+  }
+
+  div.footer{
+    border: solid 5px blue;
+    background-color: blue;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#slideshow {
+  overflow: hidden;
+  height: 800px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.slide-wrapper {
+  margin-top: 200px;
+  width: 3200px;
+
+}
+
+.slide {
+  float: left;
+  height: 800px;
+  width: 800px;
+  -webkit-animation: slide 9s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0%   {background-image: url('news1.jpg');}
+    25%  {background-image: url('news3.jpg');}
+    50%  {background-image: url('news3.jpg');}
+		75%  {background-image: url('news4.jpg');}
+    100%  {background-image: url('news1.jpg');}
+}
+  </style>
+
+</head>
+
+<body>
+
+
+
+<div class="header">
+  <ul>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    <li><a href="#home"><img src="logo-coalition-plus.png" alt="home" width="75px" height="75px"></a></li>
+    <li><a href="#news"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Qui sommes-nous?</a></li>
+    <li><a href="#contact"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Associations</a></li>
+    <li><a href="#about"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;&nbsp;Newsletter</a></li>
+    <li><a href="#about"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Nous soutenir</a></li>
+    <li><a href="#about"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+  </ul>
+</div>
+
+
+<div class="container">
+
+
+<div class="content">
+<h2>CONTENU</h2>
+</div>
+
+<div class="content">
+  <div id="slideshow">
+    <div class="slide-wrapper">
+      <div class="slide"><h1>titre 1</h1></div>
+      <div class="slide"><h1>titre 2</h1></div>
+      <div class="slide"><img src="news3.jpg" alt="cover"></div>
+      <div class="slide"><img src="news4.jpg" alt="cover"></div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+<P>CONTENU</P>
+<img src="image.php" />
+</div>
+
+<div class="content">
+<P>CONTENU</P>
+<img src="image.php" />
+</div>
+
+<div class="content">
+<P>CONTENU</P>
+<img src="image.php" />
+</div>
+
+<div class="content">
+<P>CONTENU</P>
+<img src="image.php" />
+</div>
+
+<div class="content">
+<P>CONTENU</P>
+<img src="image.php" />
+</div>
+
+<div class="content">
+<P>CONTENU</P>
+<img src="image.php" />
+</div>
+
+<div class="content">
+<P>CONTENU</P>
+<img src="image.php" />
+</div>
+
+<div class="content">
+<P>CONTENU</P>
+<img src="image.php" />
+</div>
+
+<div class="content">
+<P>CONTENU</P>
+<img src="image.php" />
+</div>
+
+<div class="content">
+<P>CONTENU</P>
+<img src="image.php" />
+</div>
+
+<div class="footer">
+  <ul>
+    <li><a href="#home"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+    <li><a href="#news"><i class="fa fa-linkedin" aria-hidden="true"></i>
+</a></li>
+    <li><a href="#contact"><i class="fa fa-twitter" aria-hidden="true"></i>
+</a></li>
+    <li><a href="#about">espace</a></li>
+    <li><a href="#about">Coalition PLUS Schweiz</a></li>
+    <li><a href="#about">Espace donateurs</a></li>
+    <li><a href="#about">Presse</a></li>
+    <li><a href="#about">Contact</a></li>
+  </ul>
+
+
+</div>
+
+</div>
+
+
+
+
+
+</body>
+
+</html>

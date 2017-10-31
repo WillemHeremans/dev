@@ -1,0 +1,29 @@
+.moteur {
+	width: 270px;
+	height: 400px;
+	right: 0px;
+	background-color: white;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	display: block;
+	border-top-left-radius: 10px;
+	margin-top: 10px;
+	margin-right: 0px;
+	padding: 30px;
+	position: absolute;
+	top: 70px;
+	z-index: 1000;
+
+}
+
+
+.moteurinput {
+	  padding: 5px;
+	  width: 80%;
+	  margin-bottom: 10px;
+}
+
+.block {
+	  display: block;
+	  width: 100%;
+}
