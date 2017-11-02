@@ -2,8 +2,11 @@
 <html lang="fr">
 
 <head>
+  <meta charset="UTF-8"/>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="logo-coalition-plus.png">
    <link rel="stylesheet" href="./font/css/font-awesome.min.css">
+
 
   <style media="screen">
 body {
@@ -34,11 +37,22 @@ background-color: lightblue;}
     width: 100%;
     margin-top:165px;
     margin-bottom:95px;
-
   }
 
   div.content{
     border: solid 5px green;
+  }
+
+  .content-slide{
+    margin-right: 50%;
+    border: solid 5px black;
+    display: table-cell;
+  }
+
+  .content-slide-txt{
+    margin-left: 50%;
+    border: solid 5px black;
+    display: table-cell;
   }
 
   div.footer{
@@ -68,76 +82,192 @@ li a {
     text-align: center;
     padding: 25px 16px;
     text-decoration: none;
+    width: 200px;
+    height: 200px;
+}
+
+li a.header {
+  font-size: 1.5em;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 45px 15px;
+    text-decoration: none;
+    width: 275px;
+}
+
+li a.footer {
+  font-size: 0.95em;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+    width: 200px;
+    height: 5px;
+}
+
+li a.footer-social {
+  font-size: 1em;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+    width: 20px;
+    height: 5px;
 }
 
 li a:hover {
     background-color: #111;
 }
 
+h2{
+  text-align: left;
+}
+
 #slideshow {
   overflow: hidden;
-  height: 800px;
+  height: 400px;
   width: 800px;
   margin: 0 auto;
 }
-
 .slide-wrapper {
-  margin-top: 200px;
+  margin: 0;
   width: 3200px;
-
 }
-
 .slide {
   float: left;
-  height: 800px;
+  height: 400px;
   width: 800px;
-  -webkit-animation: slide 9s ease-in-out infinite;
+  animation: slide 9s ease-in-out infinite;
 }
 
 @keyframes slide {
     0%   {background-image: url('news1.jpg');}
-    25%  {background-image: url('news3.jpg');}
+    25%  {background-image: url('news2.jpg');}
     50%  {background-image: url('news3.jpg');}
 		75%  {background-image: url('news4.jpg');}
-    100%  {background-image: url('news1.jpg');}
+    100%  {background-image: url('news5.jpg');}
 }
+.slide-txt {
+  display: inline-table;
+  float: left;
+  height: 400px;
+  width: 800px;
+  animation: slide-txt 9s ease-in-out infinite;
+}
+@keyframes slide-txt {
+
+}
+
+h3{
+  width: 800px;
+  height: : 400px;
+}
+
+.content img {
+
+}
+
+div.logo-intro{
+  width: 200px;
+  border: solid 5px violet;
+  display: inline-block;
+
+}
+
+div.intro {
+  width: 1220px;
+  border: solid 5px blue;
+  display: inline-block;
+  padding: 25px 5px;
+}
+
+div.logos-membres-intro{
+  width: 350px;
+  display: inline-block;
+  border: solid 5px red ;
+  padding: 5px 5px;
+}
+
+p {
+  font-family: sans-serif;
+  text-align: justify;
+  font-size: 1.5em;
+}
+
   </style>
 
 </head>
 
 <body>
 
-
-
 <div class="header">
   <ul>
-    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
     <li><a href="#home"><img src="logo-coalition-plus.png" alt="home" width="75px" height="75px"></a></li>
-    <li><a href="#news"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Qui sommes-nous?</a></li>
-    <li><a href="#contact"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Associations</a></li>
-    <li><a href="#about"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;&nbsp;Newsletter</a></li>
-    <li><a href="#about"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Nous soutenir</a></li>
-    <li><a href="#about"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+    <li><a class="header" href="#about"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Qui sommes-nous?</a></li>
+    <li><a class="header" href="#contact"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Associations</a></li>
+    <li><a class="header" href="#news"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;&nbsp;Newsletter</a></li>
+    <li><a class="header" href="#support"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Nous soutenir</a></li>
+    <li><a class="header search" href="#search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
   </ul>
 </div>
 
 
 <div class="container">
 
-
 <div class="content">
-<h2>CONTENU</h2>
+  <div class="logo-intro">
+
+
+<img src="logo-coalition-plus.png" alt="home" width="200px" height="200px">
+</div>
+<div class="intro">
+
+<p><span style="color:#730800;"><b>Coalition PLUS</b></span> intervient dans 35 pays auprès de plus de 60 associations de <span style="color:#730800;"><b>lutte contre le sida et les hépatites</b></span>. Elle s'est dotée d'une gouvernance internationale qui réunit <span style="color:#730800;"><b>15 ONG dans 15 pays</b></span>, et de plateformes sous-régionales d'interventions, basées chez les membres. Ses objectifs sont la mise en place de <span style="color:#730800;"><b>recherches</b></span> communautaires, le <span style="color:#730800;"><b>plaidoyer</b></span> auprès des décideurs nationaux et internationaux, la <span style="color:#730800;"><b>promotion</b></span> de la démarche communautaire en santé basée sur l'excellence de gestion et de démocratie.</p>
+
+
+
+</div>
+
+<div class="logos-membres-intro">
+  <img src="index.png" alt="partenaires" width="50px" height="50px">
+  <img src="index2.png" alt="partenaires" width="50px" height="50px">
+  <img src="index3.png" alt="partenaires" width="50px" height="50px">
+  <img src="index4.png" alt="partenaires" width="50px" height="50px">
+  <img src="index5.png" alt="partenaires" width="50px" height="50px">
+  <img src="index6.png" alt="partenaires" width="50px" height="50px">
+  <img src="index7.png" alt="partenaires" width="50px" height="50px">
+  <img src="index8.png" alt="partenaires" width="50px" height="50px">
+  <img src="index9.png" alt="partenaires" width="50px" height="50px">
+  <img src="index10.png" alt="partenaires" width="50px" height="50px">
+  <img src="index11.png" alt="partenaires" width="50px" height="50px">
+  <img src="index12.png" alt="partenaires" width="50px" height="50px">
+  <img src="index13.png" alt="partenaires" width="50px" height="50px">
+</div>
 </div>
 
 <div class="content">
+  <div class="content-slide">
+
+
   <div id="slideshow">
     <div class="slide-wrapper">
-      <div class="slide"><h1>titre 1</h1></div>
-      <div class="slide"><h1>titre 2</h1></div>
-      <div class="slide"><img src="news3.jpg" alt="cover"></div>
-      <div class="slide"><img src="news4.jpg" alt="cover"></div>
+      <div class="slide"></div>
     </div>
   </div>
+  </div>
+
+
+  <div class="content-slide-txt">
+  <div id="slideshow">
+    <div class="slide-wrapper-txt">
+      <div class="slide-txt"></div>
+    </div>
+  </div>
+  </div>
+
 </div>
 
 <div class="content">
@@ -155,63 +285,32 @@ li a:hover {
 <img src="image.php" />
 </div>
 
-<div class="content">
-<P>CONTENU</P>
-<img src="image.php" />
-</div>
-
-<div class="content">
-<P>CONTENU</P>
-<img src="image.php" />
-</div>
-
-<div class="content">
-<P>CONTENU</P>
-<img src="image.php" />
-</div>
-
-<div class="content">
-<P>CONTENU</P>
-<img src="image.php" />
-</div>
-
-<div class="content">
-<P>CONTENU</P>
-<img src="image.php" />
-</div>
-
-<div class="content">
-<P>CONTENU</P>
-<img src="image.php" />
-</div>
-
-<div class="content">
-<P>CONTENU</P>
-<img src="image.php" />
-</div>
 
 <div class="footer">
   <ul>
-    <li><a href="#home"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-    <li><a href="#news"><i class="fa fa-linkedin" aria-hidden="true"></i>
+    <li><a class="footer" href="#schweiz">Coalition PLUS Schweiz</a></li>
+    <li><a class="footer" href="#donateurs">Espace donateurs</a></li>
+    <li><a class="footer" href="#presse">Presse</a></li>
+    <li><a class="footer" href="#contact">Contact</a></li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    <li><a class="footer-social" href="#home"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+    <li><a class="footer-social" href="#news"><i class="fa fa-linkedin" aria-hidden="true"></i>
 </a></li>
-    <li><a href="#contact"><i class="fa fa-twitter" aria-hidden="true"></i>
+    <li><a class="footer-social" href="#contact"><i class="fa fa-twitter" aria-hidden="true"></i>
 </a></li>
-    <li><a href="#about">espace</a></li>
-    <li><a href="#about">Coalition PLUS Schweiz</a></li>
-    <li><a href="#about">Espace donateurs</a></li>
-    <li><a href="#about">Presse</a></li>
-    <li><a href="#about">Contact</a></li>
   </ul>
 
 
 </div>
 
 </div>
-
-
-
-
 
 </body>
 
