@@ -10,17 +10,9 @@
 
   <style media="screen">
 body {
+  background-color: #d6d6c2;
   margin:0;
-background-color: lightblue;}
-
-
-@media screen and (min-width: 680px) {
-    body {
-        background-color: lightgreen;
-    }
 }
-
-
   div.header{
     border-bottom: solid 15px #730800;
     overflow: hidden;
@@ -30,40 +22,30 @@ background-color: lightblue;}
     width: 100%;
     height: 120px;
   }
-
   div.container{
-    border: solid 5px yellow;
     position: inherit;
     width: 100%;
     margin-top:165px;
     margin-bottom:95px;
   }
-
-  div.content{
-    border: solid 5px green;
+  div.content-temoin{
+    border-top: solid 5px #730800;
+    margin: 15px;
   }
-
   .content-slide{
     margin-right: 50%;
-    border: solid 5px black;
     display: table-cell;
   }
-
   .content-slide-txt{
     margin-left: 50%;
-    border: solid 5px black;
     display: table-cell;
   }
-
   div.footer{
-    border: solid 5px blue;
-    background-color: blue;
     position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
   }
-
   ul {
     list-style-type: none;
     margin: 0;
@@ -71,11 +53,9 @@ background-color: lightblue;}
     overflow: hidden;
     background-color: #333;
 }
-
 li {
     float: left;
 }
-
 li a {
     display: block;
     color: white;
@@ -85,7 +65,6 @@ li a {
     width: 200px;
     height: 200px;
 }
-
 li a.header {
   font-size: 1.5em;
     display: block;
@@ -95,9 +74,9 @@ li a.header {
     text-decoration: none;
     width: 275px;
 }
-
 li a.footer {
-  font-size: 0.95em;
+  font-family: sans-serif;
+  font-size: 1em;
     display: block;
     color: white;
     text-align: center;
@@ -106,26 +85,34 @@ li a.footer {
     width: 200px;
     height: 5px;
 }
-
 li a.footer-social {
   font-size: 1em;
     display: block;
-    color: white;
+    color:red;
     text-align: center;
     padding: 25px 16px;
     text-decoration: none;
     width: 20px;
     height: 5px;
 }
-
+li a.footer-social-first {
+  font-size: 1em;
+    display: block;
+    color:red;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+    width: 20px;
+    height: 5px;
+    margin-left: 750px;
+}
 li a:hover {
     background-color: #111;
+    color:#730800;
 }
-
 h2{
   text-align: left;
 }
-
 #slideshow {
   overflow: hidden;
   height: 400px;
@@ -135,68 +122,107 @@ h2{
 .slide-wrapper {
   margin: 0;
   width: 3200px;
+  margin-left: 20px;
 }
 .slide {
+  position: inherit;
   float: left;
-  height: 400px;
+  height: 399px;
   width: 800px;
-  animation: slide 9s ease-in-out infinite;
+  animation: slide 5s ease-in-out infinite;
 }
-
 @keyframes slide {
     0%   {background-image: url('news1.jpg');}
-    25%  {background-image: url('news2.jpg');}
-    50%  {background-image: url('news3.jpg');}
-		75%  {background-image: url('news4.jpg');}
-    100%  {background-image: url('news5.jpg');}
+    50%  {background-image: url('news2.jpg');}
+    100%  {background-image: url('news3.jpg');}
 }
 .slide-txt {
   display: inline-table;
+  margin-left: 30px;
   float: left;
   height: 400px;
-  width: 800px;
-  animation: slide-txt 9s ease-in-out infinite;
+  width: 1000px;
 }
-@keyframes slide-txt {
-
+.items{
+margin-left: 15px;
 }
-
-h3{
-  width: 800px;
-  height: : 400px;
+.item-1{
+  font-size: 1.75em;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+  animation-name: anim-1;
 }
-
-.content img {
-
+.item-2{
+  font-size: 1.75em;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+  animation-name: anim-2;
 }
-
+.item-3 {
+  font-size: 1.75em;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+  animation-name: anim-3;
+}
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% {left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}
 div.logo-intro{
   width: 200px;
-  border: solid 5px violet;
-  display: inline-block;
-
+padding: 25px 5px;
+  float: left;
 }
-
 div.intro {
   width: 1220px;
-  border: solid 5px blue;
-  display: inline-block;
-  padding: 25px 5px;
+  float: left;
+  padding: 0px 25px;
+  margin-top: 30px;
 }
 
 div.logos-membres-intro{
   width: 350px;
-  display: inline-block;
-  border: solid 5px red ;
-  padding: 5px 5px;
+  float: right;
+  padding: 25px 5px;
 }
-
 p {
   font-family: sans-serif;
   text-align: justify;
   font-size: 1.5em;
 }
 
+iframe{
+  width:100%;
+  height:398px;
+}
+
+img.temoin{
+
+}
+
+div.content-temoin p {
+  float: right;
+  width: 800px;
+  margin-right: 800px;
+}
+
+i{
+  clear:both;
+}
   </style>
 
 </head>
@@ -206,7 +232,7 @@ p {
 <div class="header">
   <ul>
     <li><a href="#home"><img src="logo-coalition-plus.png" alt="home" width="75px" height="75px"></a></li>
-    <li><a class="header" href="#about"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Qui sommes-nous?</a></li>
+    <li><a class="header" href="#about"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Qui sommes-nous&nbsp;?</a></li>
     <li><a class="header" href="#contact"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Associations</a></li>
     <li><a class="header" href="#news"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;&nbsp;Newsletter</a></li>
     <li><a class="header" href="#support"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Nous soutenir</a></li>
@@ -214,20 +240,16 @@ p {
   </ul>
 </div>
 
-
 <div class="container">
 
 <div class="content">
   <div class="logo-intro">
 
-
-<img src="logo-coalition-plus.png" alt="home" width="200px" height="200px">
+<img src="logo-coalition-plus-intro.png" alt="home" width="200px" height="200px" style="margin:5px;">
 </div>
 <div class="intro">
 
 <p><span style="color:#730800;"><b>Coalition PLUS</b></span> intervient dans 35 pays auprès de plus de 60 associations de <span style="color:#730800;"><b>lutte contre le sida et les hépatites</b></span>. Elle s'est dotée d'une gouvernance internationale qui réunit <span style="color:#730800;"><b>15 ONG dans 15 pays</b></span>, et de plateformes sous-régionales d'interventions, basées chez les membres. Ses objectifs sont la mise en place de <span style="color:#730800;"><b>recherches</b></span> communautaires, le <span style="color:#730800;"><b>plaidoyer</b></span> auprès des décideurs nationaux et internationaux, la <span style="color:#730800;"><b>promotion</b></span> de la démarche communautaire en santé basée sur l'excellence de gestion et de démocratie.</p>
-
-
 
 </div>
 
@@ -246,45 +268,67 @@ p {
   <img src="index12.png" alt="partenaires" width="50px" height="50px">
   <img src="index13.png" alt="partenaires" width="50px" height="50px">
 </div>
+<i></i>
 </div>
 
 <div class="content">
   <div class="content-slide">
 
-
   <div id="slideshow">
     <div class="slide-wrapper">
-      <div class="slide"></div>
+      <div class="slide">
+
+        <div class="items">
+
+        <div class="item-1"><span style="color:#730800;"><b><span style="color:white;background-color:#730800;font-size:0.85em;font-family:serif;">NEWS</span><br> Roumanie : les ONG appellent le gouvernement à soutenir les efforts de prévention du VIH/sida</span></b></div>
+
+<div class="item-2"><span style="color:#730800;"><b><span style="color:white;background-color:#730800;font-size:0.85em;font-family:serif;">NEWS</span><br>Journée mondiale contre les hépatites : Survivre grâce à des circuits alternatifs d’accès aux traitements</span></b></div>
+        <div class="item-3"><span style="color:#730800;"><b><span style="color:white;background-color:#730800;font-size:0.85em;font-family:serif;">NEWS</span><br>4 pays obtiennent l’accès aux génériques contre le VIH et l’hépatite C : les activistes revendiquent cette victoire !</span></b></div>
+</div>
+      </div>
     </div>
   </div>
   </div>
-
 
   <div class="content-slide-txt">
-  <div id="slideshow">
-    <div class="slide-wrapper-txt">
-      <div class="slide-txt"></div>
-    </div>
+      <div class="slide-txt">
+
+<iframe src="https://www.youtube.com/embed/8g2xqCBPkuo" frameborder="0" allowfullscreen></iframe>
+
+      </div>
   </div>
-  </div>
-
 </div>
 
-<div class="content">
-<P>CONTENU</P>
-<img src="image.php" />
+<div class="content-temoin">
+<P>
+<i>«&nbsp;A Maurice, le poids des préjugés sur le sida est énorme&nbsp;!&nbsp;»</i> <br>
+<span style="color:white;background-color:#730800;font-size:0.85em;font-family:serif;">Témoignages</span><br>
+En 2014, 322 nouveaux cas de sida ont été répertoriés à l’île Maurice. Rachel Constantin est la secrétaire du conseil d’administration de PILS, une...
+</P>
+<img class="temoin" src="temoin1.jpg" width="200px" height="200px" />
 </div>
 
-<div class="content">
-<P>CONTENU</P>
-<img src="image.php" />
+<div class="content-temoin">
+<P>
+<i>«&nbsp;Après 23 ans de lutte, je garde l’espoir que nous pouvons vaincre le VIH...&nbsp;»</i><br>
+<span style="color:white;background-color:#730800;font-size:0.85em;font-family:serif;">Témoignages</span><br>
+L’engagement de Martine Somda dans la lutte contre le VIH/sida au Burkina Faso ne date pas d’hier. Mais pour la présidente de l’association REVS+, une...
+</P>
+<img class="temoin" src="temoin2.png" width="200px" height="200px" />
 </div>
 
-<div class="content">
-<P>CONTENU</P>
-<img src="image.php" />
+<div class="content-temoin">
+<P>
+<i>«&nbsp;Je ne laisserai pas le sida définir qui je suis&nbsp;»</i><br>
+<span style="color:white;background-color:#730800;font-size:0.85em;font-family:serif;">Témoignages<br></span>
+C’est un portrait un peu particulier que propose aujourd’hui Coalition PLUS. Toujours dans la continuité de la Journée internationale des droits des femmes et de...
+</P>
+<img class="temoin" src="temoin3.png" width="200px" height="200px" />
 </div>
 
+<div class="content-temoin">
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1csrAcX8Sseqt2Rc_iUUoi07IK1s" width="800" height="400"></iframe>
+</div>
 
 <div class="footer">
   <ul>
@@ -292,26 +336,15 @@ p {
     <li><a class="footer" href="#donateurs">Espace donateurs</a></li>
     <li><a class="footer" href="#presse">Presse</a></li>
     <li><a class="footer" href="#contact">Contact</a></li>
-    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-    <li><a class="footer-social" href="#home"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+
+    <li><a class="footer-social-first" href="#home"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
     <li><a class="footer-social" href="#news"><i class="fa fa-linkedin" aria-hidden="true"></i>
 </a></li>
     <li><a class="footer-social" href="#contact"><i class="fa fa-twitter" aria-hidden="true"></i>
 </a></li>
   </ul>
-
-
 </div>
-
 </div>
 
 </body>
-
 </html>
