@@ -1,0 +1,145 @@
+<!DOCTYpE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style media="screen">
+
+body {
+font-family: sans-serif;
+margin:0;
+background-color: lightblue;}
+
+div.header{
+border: solid 1px red;
+overflow: hidden;
+background-color: red;
+position: fixed; /* Set the navbar to fixed position */
+top: 0; /* position the navbar at the top of the page */
+width: 100%; /* Full width */
+}
+div.container{
+border: solid 1px yellow;
+position: inherit;
+width: 90%;
+margin-left: 5%;
+margin-top:150px;
+margin-bottom:95px;
+}
+div.content{
+border: solid 1px green;
+}
+div.footer{
+border: solid 1px blue;
+background-color: blue;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+li {
+float: left;
+width: 50%;
+}
+li.home {
+width: 100%;
+}
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 25px 16px;
+text-decoration: none;
+}
+li a:hover {
+background-color: #111;
+}
+.date{
+float: right;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+<div class="header">
+  <ul>
+<li class="name"><a href="#" id="name">Name</a></li>
+<li class="date"><a href="#" id="date">Date</a></li>
+  </ul>
+</div>
+
+
+<div class="container">
+
+
+<div class="content">
+<h2>To Do...</h2>
+</div>
+
+
+<div class="content">
+<p>To Do...</p>
+
+</div>
+
+<div class="content">
+<p>To Do...</p>
+
+</div>
+
+<div class="content">
+<p>To Do...</p>
+
+</div>
+
+<div class="content">
+<p>To Do...</p>
+
+</div>
+
+<div class="content">
+<p id="demo">To Do...</p>
+
+</div>
+
+<div class="footer">
+  <ul>
+<li class="home"><a href="#home">Home</a></li>
+
+  </ul>
+
+</div>
+
+</div>
+
+<script>
+var myName = document.getElementById('name');
+myName.textContent = 'Jhon Doe';
+var myDate = document.getElementById('date');
+myDate.textContent = 'Lundi 6 novembre';
+</script>
+
+<script>
+
+var myJSON = '{ "name":"John", "age":31, "city":"New York" }';
+var myObj = JSON.parse(myJSON);
+document.getElementById("demo").innerHTML = myObj.city;
+</script>
+
+</body>
+
+</html>
