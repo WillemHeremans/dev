@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+<title>Test js 4</title>
+
+<style media="screen">
+.swal-overlay {
+background-color: rgba(43, 165, 137, 0.45);
+}
+</style>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+
+<p>source: <a href="https://sweetalert.js.org/">SweetAlert</a></p>
+
+<script type="text/javascript">
+swal("Quel est ton Prénom ?", {
+  content: "input",
+  icon: "info",
+})
+.then((value) => {
+  swal(`Bonjour ${value}`);
+});
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

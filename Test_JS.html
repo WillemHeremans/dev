@@ -13,8 +13,14 @@
 
 <a id="myAnchor" href="http://www.microsoft.com">Microsoft</a>
 <button onclick="myFunction()">Change link</button>
- 
+
+<a href="javascript:alert('Coucou');"> Cliquez ici </a>
+
+<img src="dove.png" alt="Mon Image" ondblclick="alert('Double clic');" onmouseout="alert('La souris sort');" />
+
 <script>
+
+
 function myFunction() {
     document.getElementById("myAnchor").innerHTML = "W3Schools";
     document.getElementById("myAnchor").href = "https://www.w3schools.com";
@@ -22,8 +28,7 @@ function myFunction() {
 }
 </script>
 
-
-<script src="MonScript.js"></script>
+<script type="text/javascript" src="MonScript.js"></script>
 
 </body>
 
