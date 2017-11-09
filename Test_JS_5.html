@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8"/>
-<title>Test js 5</title>
+  <head>
+    <meta charset="utf-8">
+  <title>Écriture d'une fonction simple</title>
+
+  <script type="text/javascript">
+  // <!--
+
+  function maFonction() {
+
+    alert("Appuyez sur OK pour débuter")
+    var questUn = prompt("Saisissez la largeur voulue")
+    var go  =  prompt("Saisissez une valeur !!!")
 
 
+    while (questUn === null || questUn === "") {
+
+    return  go
+
+    }
+
+    // else {
+    //   var questDeux = prompt("Saisissez la hauteur voulue")
+    // }
+
+    // if (questDeux == null) {
+    //
+    //   prompt("Saisissez une valeur !!!")
+    // }
+    //
+    // else {
+    //
+    //
+    //   document.getElementById("myDiv").style.backgroundColor = "red";
+    //
+    // }
+
+
+
+  }
+
+
+  // -->
+  </script>
 </head>
-
 <body>
 
-  <p id="bobo">ppppppppppppppppppppp</p>
+<h1>Écriture d'une fonction simple</h1>
 
-<script type="text/javascript">
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="maFonction()">Lancer la fonction</button></p>
 
-document.write(Date());
+<div id="myDiv">
 
-
-
-
-
-
-
-</script>
-
-
+</div>
 
 </body>
-
 </html>
