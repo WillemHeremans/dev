@@ -83,9 +83,29 @@ alert("Bravo!")
 
 // nombre aléatoire entre 0 et 100, Math.round arrondit, Math.random génère un nombre entre 0 et 1 
 
-var alea = Math.round(Math.random() * 100);
+var alea = Math.round(Math.random() * 10);
+var resp = prompt("Veuillez deviner un nombre entre 0 et 10");
+
+for (i = 0; i < 10; i++;) {
+
+if (alea < resp) {
+alert("plus grand")
+}
+
+else if (alea > resp) {
+alert("plus petit")
+} 
+
+else if (alea == resp) {
+alert("c'est bon")
+}
+
+break;
+}
 
 alert(alea);
+
+
 
 
 
