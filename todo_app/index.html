@@ -5,7 +5,7 @@
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="stylesheet" href="calendar.css">
 <title>todo_app</title>
 <style media="screen">
 html {
@@ -174,17 +174,42 @@ border-bottom: solid 2px lightgrey;
 	width: 90%;
 border-bottom: solid 2px lightgrey;
 }
-.next{
-	display: none;
-	/*border: solid 5px red;*/
+.ligne-task{
+	float: left;
+	margin-left:5%;
+	margin-right: 5%;
+	width: 100%;
+border-bottom: solid 2px lightgrey;
 }
-
 s.late {
 	text-decoration-color: red;
 }
 .check-late{
 	color: red;
 	padding: 35px 15px;
+}
+
+.next{
+	display: none;
+}
+
+.main{
+  display: block;
+}
+
+input {
+border:none;
+font-size: 1.25em;
+color: grey;
+padding: 0.5%  5%;
+}
+
+h3{
+  margin-top: 2.5%;
+}
+
+.container-calendar{
+
 }
 
   </style>
@@ -382,36 +407,100 @@ s.late {
 
 	</div>
 
-	<div class="next">
+	<div class="next" id="add">
 
 
-		<div class="header">
+    <div class="header">
 
-			<ul>
-		<li class="menu"><a href="#" id="title-2">MY TODOLIST</a></li>
-		<li class="menu"><a href="#" id="moins"><span class="plus">x</span></a></li>
-			</ul>
+  		<ul>
+  	<li class="menu"><a href="#" id="title">MY TODOLIST</a></li>
+  	<li class="menu"><a href="#" id="add"><span class="plus">x</span></a></li>
 
-		</div>
+  	  </ul>
+
+  		<div class="ligne"></div>
+
+  	</div>
+
+
+<div class="container" id="container-next">
+
+
+          <h3 class="title">TITLE</h3>
+          <form action="/action_page.php">
+            <input type="text" name="title" value="My todo title">
+        </form>
+
+        <div class="ligne-item"></div>
+
+        <h3>DESCRIPTION</h3>
+        <form action="/action_page.php">
+          <input type="text" name="title" value="My todo description">
+      </form>
+
+      <div class="ligne-item"></div>
+
+      <h3>START AT</h3>
+      <form action="/action_page.php">
+        <input type="text" name="title" value="December 12, 2 PM">
+      </form>
+
+<div class="ligne-item"></div>
+
+      <h3>END AT</h3>
+      <form action="/action_page.php">
+        <input type="text" name="title" value="December 12, 2 PM">
+      </form>
+
+
+</div>
 
 
 
-		<div class="footer">
 
-			<ul>
-		<li class="footer"><a href="#">All task</a></li>
-		<li class="footer"><a href="#">Todo task</a></li>
-		<li class="footer"><a href="#">Done task</a></li>
 
-			</ul>
+<div class="footer">
+<div class="ligne-footer"></div>
+    <ul>
+  <li class="menu-footer"><a href="#">&nbsp;</a></li>
+  <li class="menu-footer"><a href="#">&nbsp;</a></li>
+  <li class="menu-footer"><a href="#">Add task</a></li>
 
-		</div>
+    </ul>
+
+  </div>
 
 	</div>
 
 
 
 <script>
+
+var more = document.getElementById("more");
+
+more.onclick = function(){
+var add = document.getElementById("add");
+var more = document.getElementById("more");
+if(more.style.display == "block"){
+    more.style.display="none";
+} else {
+    add.style.display="block";
+}
+
+}
+
+var add = document.getElementById("add");
+
+add.onclick = function(){
+var more = document.getElementById("more");
+var add = document.getElementById("add");
+if(add.style.display == "block"){
+    add.style.display="none";
+} else {
+    more.style.display="block";
+}
+
+}
 
 var montre = document.getElementsByTagName("h2")[0];
 
@@ -498,6 +587,7 @@ if(elem.style.display == "block"){
 }
 
 </script>
+
 
 </body>
 
