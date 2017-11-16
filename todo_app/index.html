@@ -55,6 +55,7 @@ position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
+
 }
 ul {
 list-style-type: none;
@@ -117,6 +118,7 @@ display: inline-block;
 	  content: "";
 	  display: table;
 	  clear: both;
+
 	}
 .item-footer span{
 	display: block;
@@ -212,19 +214,23 @@ h3{
 
 }
 
+div.panel{
+  display: none;
+}
+
   </style>
 
 </head>
 
 <body>
 
-<div class="main">
+<div class="main" id="first">
 
 	<div class="header">
 
 		<ul>
 	<li class="menu"><a href="#" id="title">MY TODOLIST</a></li>
-	<li class="menu"><a href="#" id="more"><span class="plus">+</span></a></li>
+	<li class="menu"><a href="#" id="more" onclick="document.getElementById('first').style.display = 'none';document.getElementById('second').style.display = 'block'" ><span class="plus">+</span></a></li>
 
 	  </ul>
 
@@ -239,10 +245,8 @@ h3{
 									<li class="list-item">
 											<span class="todo-check"></span>
 											<header class="item-header">
-													<h2><a href="#"><span class="check">&#x25CF;</span><s>To do...</s></a></h2>
-
+													<h2 class="item-title"><a href="#"><span class="check">&#x25CF;</span><s>To do... 1</s></a></h2>
 											</header>
-
 											<footer class="item-footer">
 												<ul class="menu">
 														<li class="menu-item">Delete</li>
@@ -256,15 +260,14 @@ h3{
 													<span>end at</span>
 													<div class="ligne-item"></div>
 											</footer>
+
 									</li>
 
 									<li class="list-item">
 											<span class="todo-check"></span>
 											<header class="item-header">
-													<h2><a href="#"><span class="check">&#x25CF;</span><s>To do...</s></a></h2>
-
+													<h2 class="item-title"><a href="#"><span class="check">&#x25CF;</span><s>To do... 2</s></a></h2>
 											</header>
-
 											<footer class="item-footer">
 												<ul class="menu">
 														<li class="menu-item">Delete</li>
@@ -283,7 +286,7 @@ h3{
                     <li class="list-item">
                         <span class="todo-check"></span>
                         <header class="item-header">
-                            <h2><a href="#"><span class="check">&#9675;</span>To do...</a></h2>
+                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To do... 3</a></h2>
                         </header>
 
                         <footer class="item-footer" id="footer">
@@ -304,7 +307,7 @@ h3{
 										<li class="list-item">
                         <span class="todo-check"></span>
                         <header class="item-header">
-                            <h2><a href="#"><span class="check">&#9675;</span>To do...</a></h2>
+                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To do... 4</a></h2>
                         </header>
 
                         <footer class="item-footer" id="footer">
@@ -325,7 +328,7 @@ h3{
 										<li class="list-item">
                         <span class="todo-check"></span>
                         <header class="item-header">
-                            <h2><a href="#"><span class="check">&#9675;</span>To do...</a></h2>
+                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To do...</a></h2>
                         </header>
 
                         <footer class="item-footer" id="footer">
@@ -346,7 +349,7 @@ h3{
 										<li class="list-item">
                         <span class="todo-check"></span>
                         <header class="item-header">
-                            <h2><a href="#"><span class="check">&#9675;</span>To do...</a></h2>
+                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To do...</a></h2>
                         </header>
 
                         <footer class="item-footer" id="footer">
@@ -367,7 +370,7 @@ h3{
 										<li class="list-item">
 												<span class="todo-check"></span>
 												<header class="item-header">
-														<h2><a href="#"><span class="check-late">&#x25CF;</span><s class="late">To do...</s></a></h2>
+														<h2 class="item-title"><a href="#"><span class="check-late">&#x25CF;</span><s class="late">To do...</s></a></h2>
 
 												</header>
 
@@ -407,14 +410,14 @@ h3{
 
 	</div>
 
-	<div class="next" id="add">
+	<div class="next" id="second">
 
 
     <div class="header">
 
   		<ul>
   	<li class="menu"><a href="#" id="title">MY TODOLIST</a></li>
-  	<li class="menu"><a href="#" id="add"><span class="plus">x</span></a></li>
+  	<li class="menu"><a href="#" id="add" onclick="document.getElementById('second').style.display = 'none';document.getElementById('first').style.display = 'block'" ><span class="plus">x</span></a></li>
 
   	  </ul>
 
@@ -476,115 +479,106 @@ h3{
 
 <script>
 
-var more = document.getElementById("more");
+var acc = document.getElementsByClassName("list-item");
+var i;
 
-more.onclick = function(){
-var add = document.getElementById("add");
-var more = document.getElementById("more");
-if(more.style.display == "block"){
-    more.style.display="none";
-} else {
-    add.style.display="block";
+for (i = 0; i < acc.length; i++) {
+acc[i].onclick = function(){
+
+    var panel = this.querySelector("footer");
+
+    if (panel.style.display === "block") {
+    panel.style.display = "none";
+ } else {
+        panel.style.display = "block";
+  }
 }
 
 }
 
-var add = document.getElementById("add");
-
-add.onclick = function(){
-var more = document.getElementById("more");
-var add = document.getElementById("add");
-if(add.style.display == "block"){
-    add.style.display="none";
-} else {
-    more.style.display="block";
-}
-
-}
-
-var montre = document.getElementsByTagName("h2")[0];
-
-montre.onclick = function(){
-var elem = document.getElementsByTagName("footer")[0];
-if(elem.style.display == "block"){
-    elem.style.display="none";
-} else {
-    elem.style.display="block";
-}
-
-}
-
-var montre = document.getElementsByTagName("h2")[1];
-
-montre.onclick = function(){
-var elem = document.getElementsByTagName("footer")[1];
-if(elem.style.display == "block"){
-    elem.style.display="none";
-} else {
-    elem.style.display="block";
-}
-
-}
-
-var montre = document.getElementsByTagName("h2")[2];
-
-montre.onclick = function(){
-var elem = document.getElementsByTagName("footer")[2];
-if(elem.style.display == "block"){
-    elem.style.display="none";
-} else {
-    elem.style.display="block";
-}
-
-}
-
-var montre = document.getElementsByTagName("h2")[3];
-
-montre.onclick = function(){
-var elem = document.getElementsByTagName("footer")[3];
-if(elem.style.display == "block"){
-    elem.style.display="none";
-} else {
-    elem.style.display="block";
-}
-
-}
-
-var montre = document.getElementsByTagName("h2")[4];
-
-montre.onclick = function(){
-var elem = document.getElementsByTagName("footer")[4];
-if(elem.style.display == "block"){
-    elem.style.display="none";
-} else {
-    elem.style.display="block";
-}
-
-}
-
-var montre = document.getElementsByTagName("h2")[5];
-
-montre.onclick = function(){
-var elem = document.getElementsByTagName("footer")[5];
-if(elem.style.display == "block"){
-    elem.style.display="none";
-} else {
-    elem.style.display="block";
-}
-
-}
-
-var montre = document.getElementsByTagName("h2")[6];
-
-montre.onclick = function(){
-var elem = document.getElementsByTagName("footer")[6];
-if(elem.style.display == "block"){
-    elem.style.display="none";
-} else {
-    elem.style.display="block";
-}
-
-}
+// var montre = document.getElementsByTagName("h2")[0];
+//
+// montre.onclick = function(){
+// var elem = document.getElementsByTagName("footer")[0];
+// if(elem.style.display == "block"){
+//     elem.style.display="none";
+// } else {
+//     elem.style.display="block";
+// }
+//
+// }
+//
+// var montre = document.getElementsByTagName("h2")[1];
+//
+// montre.onclick = function(){
+// var elem = document.getElementsByTagName("footer")[1];
+// if(elem.style.display == "block"){
+//     elem.style.display="none";
+// } else {
+//     elem.style.display="block";
+// }
+//
+// }
+//
+// var montre = document.getElementsByTagName("h2")[2];
+//
+// montre.onclick = function(){
+// var elem = document.getElementsByTagName("footer")[2];
+// if(elem.style.display == "block"){
+//     elem.style.display="none";
+// } else {
+//     elem.style.display="block";
+// }
+//
+// }
+//
+// var montre = document.getElementsByTagName("h2")[3];
+//
+// montre.onclick = function(){
+// var elem = document.getElementsByTagName("footer")[3];
+// if(elem.style.display == "block"){
+//     elem.style.display="none";
+// } else {
+//     elem.style.display="block";
+// }
+//
+// }
+//
+// var montre = document.getElementsByTagName("h2")[4];
+//
+// montre.onclick = function(){
+// var elem = document.getElementsByTagName("footer")[4];
+// if(elem.style.display == "block"){
+//     elem.style.display="none";
+// } else {
+//     elem.style.display="block";
+// }
+//
+// }
+//
+// var montre = document.getElementsByTagName("h2")[5];
+//
+// montre.onclick = function(){
+// var elem = document.getElementsByTagName("footer")[5];
+// if(elem.style.display == "block"){
+//     elem.style.display="none";
+// } else {
+//     elem.style.display="block";
+// }
+//
+// }
+//
+// var montre = document.getElementsByTagName("h2")[6];
+//
+// montre.onclick = function(){
+// var elem = document.getElementsByTagName("footer")[6];
+// if(elem.style.display == "block"){
+//     elem.style.display="none";
+// } else {
+//     elem.style.display="block";
+// }
+//
+// }
 
 </script>
 
