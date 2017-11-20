@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- Formulaire méthode GET -->
+  <!-- -->
+<h1>Formulaire get</h1>
+<form method="get" action="get.php">
+    <div>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" />
+    </div>
+    <div>
+        <label for="message">Message :</label>
+        <textarea id="message" name="message"></textarea>
+    </div>
+    <div>
+         <!-- Le bouton type="submit" pour envoyer vers la page d'action/value= ce qui est écrit dans le bouton-->
+        <input type="submit" value="Envoyer" />
+    </div>
+</form>
+<br/>
+
+<!-- --------------------------------------------------------------->
+
+
+
+<h1>formulaire post : </h1>
+  <!-- Formulaire méthode POST-->
+<p>
+    Veuillez taper votre prénom :
+</p>
+
+<form action="utilisateur.php" method="post">
+<p>
+    <input type="text" name="prenom" /><br/>
+    <!--L'attribut name va définir une variable à utiliser dans utilisateur.php -->
+    <textarea name="message" rows="15" cols="45" placeholder="Oui ? dis moi.."></textarea>
+
+ </p>
+    <input type="submit" value="Valider" />
+
+</form>
+
+
+<!-- ------------------------------------------------------------------------- -->
+<h1>Formulaire liste déroulante</h1>
+<!-- Liste déroulante-->
+<form method="post" action="listeDeroulante.php">
+   <p>
+   <!-- Ici, une variable$_POST['choix']sera créée, et elle contiendra le choix qu'a fait l'utilisateur. S'il a choisi « Choix 3 », la variable$_POST['choix']sera égale a la value correspondant, c'est-à-direchoix3-->
+<select name="choix">
+    <option value="choix1">Choix 1</option>
+    <option value="choix2">Choix 2</option>
+    <option value="choix3">Choix 3</option>
+    <option value="choix4">Choix 4</option>
+</select>
+   </p>
+       <input type="submit" value="Envoyer" />
+</form>
+
+
+<!-- --------------------------------------------------------------------->
+<!-- Zone d'option-->
+<h1>formulaire de type zone d'option</h1>
+<form method="post" action="zoneOption.php">
+   <p>
+       Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br />
+       <input type="radio" name="age" value="moins de 15 ans" id="moins15" /> <label for="moins15">Moins de 15 ans</label><br />
+       <input type="radio" name="age" value="entre 15-25 ans" id="medium15-25" /> <label for="medium15-25">15-25 ans</label><br />
+       <input type="radio" name="age" value="entre 25-40 ans" id="medium25-40" /> <label for="medium25-40">25-40 ans</label><br />
+       <input type="radio" name="age" value="plus de 40 ans" id="plus40" /> <label for="plus40">Encore plus vieux que ça ?! (Merci openclassroom :p)</label>
+   </p>
+       <input type="submit" value="Envoyer" />
+</form>
+
+<!-- --------------------------------------------------------------------->
+
+<h1>formulaire de type zone d'option mais avec 2 zones d'options différents</h1>
+<!-- Si vous avez deux zones d'options différentes, il faut donner un name unique à chaque groupe, comme ceci :-->
+<form method="post" action="zoneOptionMultiple.php">
+   <p>
+       Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br />
+       <input type="radio" name="age" value="moins de 15 ans" id="moins15" /> <label for="moins de 15">Moins de 15 ans</label><br />
+       <input type="radio" name="age" value="entre 15-25 ans" id="medium15-25" /> <label for="medium15-25">15-25 ans</label><br />
+       <input type="radio" name="age" value="entre 25-40 ans" id="medium25-40" /> <label for="medium25-40">25-40 ans</label><br />
+       <input type="radio" name="age" value="plus de 40 ans" id="plus40" /> <label for="plus40">Encore plus vieux que ça ?!  </label>
+   </p>
+   <p>
+       Sur quel continent habitez-vous ?<br />
+       <input type="radio" name="continent" value="europe" id="europe" /> <label for="europe">Europe</label><br />
+       <input type="radio" name="continent" value="afrique" id="afrique" /> <label for="afrique">Afrique</label><br />
+       <input type="radio" name="continent" value="asie" id="asie" /> <label for="asie">Asie</label><br />
+       <input type="radio" name="continent" value="amerique" id="amerique" /> <label for="amerique">Amérique</label><br />
+       <input type="radio" name="continent" value="australie" id="australie" /> <label for="australie">Australie</label>
+   </p>
+       <input type="submit" value="Envoyer" />
+</form>
+
+
+<!--  ---------------------------------------------------------------------- -->
+<h1>formulaire de type case à cocher</h1>
+<!-- case à cocher-->
+<form method="post" action="caseAcocher.php">
+   <p>
+       Cochez les aliments que vous aimez manger :<br />
+       <input type="checkbox" name="case" id="frites" value="frites" /> <label for="frites">Frites</label><br />
+       <input type="checkbox" name="case" id="steak" value="steack" /> <label for="steak">Steak haché</label><br />
+       <input type="checkbox" name="case" id="epinards" value="epinards" /> <label for="epinards">Epinards</label><br />
+       <input type="checkbox" name="case" id="huitres" value="huitres" /> <label for="huitres">Huitres</label>
+   </p>
+    <input type="submit" value="Envoyer" />
+</form>
+
+</body>
+</html>
