@@ -1,0 +1,23 @@
+
+div{
+  float: left;
+  margin-left: 25%;
+  width: 200px;
+  height: 200px;
+    position: relative;
+    -webkit-animation-name: move; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    0%   {left:0px; top:0px; background-image: url('drone_1.svg');}
+    25%  {left:200px; top:0px; background-image: url('drone_2.svg');}
+    50%  {left:200px; top:200px; background-image: url('drone_3.svg');}
+    75%  {left:0px; top:200px; background-image: url('drone_2.svg');}
+    100% {left:0px; top:0px; background-image: url('drone_1.svg');}
+
+}

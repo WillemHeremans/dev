@@ -1,3 +1,12 @@
+<?php
+
+include_once './core/config.php';
+
+include_once './core/connexion.php';
+
+include_once './core/request.php';
+ ?>
+
 <!DOCTYpE html>
 <html lang="fr">
 
@@ -144,6 +153,18 @@ float: right;
 .plus:hover {
 	color: lightgreen;
 	border: solid 0.10em lightgreen;
+}
+.moins {
+	margin: 1.5%;
+	border: solid 0.10em grey;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+	padding: 15px 20px;
+}
+.moins:hover {
+	color: rgba(255, 99, 71, 0.8);
+	border: solid 0.10em rgba(255, 99, 71, 0.8);
 }
 .check {
 	padding: 35px 15px;
@@ -416,7 +437,7 @@ div.panel{
 
   		<ul>
   	<li class="menu"><a href="#" id="title">MY TODOLIST</a></li>
-  	<li class="menu"><a href="#" id="add" onclick="document.getElementById('second').style.display = 'none';document.getElementById('first').style.display = 'block'" ><span class="plus">x</span></a></li>
+  	<li class="menu"><a href="#" id="add" onclick="document.getElementById('second').style.display = 'none';document.getElementById('first').style.display = 'block'" ><span class="moins">x</span></a></li>
 
   	  </ul>
 
