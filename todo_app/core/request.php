@@ -24,10 +24,10 @@ function selectAll(){
 
 function deleteTask($id){
 	global $bdd;
-	$phrase_sql = "DELETE FROM task WHERE id = :id";
+	$phrase_sql = "DELETE FROM task WHERE task_id = :task_id";
 
 	$preparation = $bdd->prepare($phrase_sql);
-	$preparation->bindParam(':id',$id,PDO::PARAM_INT);
+	$preparation->bindParam(':task_id',$id,PDO::PARAM_INT);
 
 	if ($preparation->execute()) {
 		header('Location: index.php');
@@ -40,12 +40,12 @@ function deleteTask($id){
 function addTask(){
 	global $bdd;
 
-	$phrase_sql = "INSERT INTO task (title, description)
-    VALUES (:title, :details)";
+	$phrase_sql = "INSERT INTO task (task_title, task_description)
+    VALUES (:task_title, :task_description)";
 	$preparation = $bdd->prepare($phrase_sql);
 
-	$preparation->bindParam(':title',$_POST['title'],PDO::PARAM_STR);
-	$preparation->bindParam(':details',$_POST['description'],PDO::PARAM_STR);
+	$preparation->bindParam(':task_title',$_POST['task_title'],PDO::PARAM_STR);
+	$preparation->bindParam(':task_description',$_POST['task_description'],PDO::PARAM_STR);
 
 	if ($preparation->execute()) {
 		header('Location: index.php');

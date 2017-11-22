@@ -110,6 +110,20 @@ text-decoration: none;
 li.menu-item:hover {
 background-color: #b3e0ff;
 }
+button.menu-item  {
+float: right;
+display: inline;
+width: 25%;
+color: grey;
+text-align: center;
+padding: 25px 0;
+text-decoration: none;
+border: none;
+background: none;
+}
+button.menu-item:hover {
+background-color: #b3e0ff;
+}
 .item-container{
 display: inline-block;
 	width: 100%;
@@ -262,11 +276,38 @@ div.panel{
 	<div class="container" id="container">
 
                 <ul class="list" id="todo">
+<?php foreach ($task as $task): ?>
+									<li class="list-item">
+											<span class="todo-check"></span>
+											<header class="item-header">
+													<h2 class="item-title"><a href="#"><span class="check">&#x25CF;</span><?php echo $task['task_title'] ?></a></h2>
+											</header>
+											<footer class="item-footer">
+												<ul class="menu">
+                          <form action="" method="POST">
+        <button class="menu-item" type="submit" name="delete" value="<?php echo $task['task_id'] ?>">Delete</button>
+
+														<button class="menu-item">Edit</button>
+
+												</ul>
+												<div class="item-container">
+														<p><?php echo $task['task_description'] ?></p>
+												</div>
+													<span class="done"><a href="#">&#10004;</a></span>
+													<span><?php echo $task['task_start_timestamp'] ?></span>
+													<span><?php echo $task['task_end_timestamp'] ?></span>
+													<div class="ligne-item"></div>
+											</footer>
+<?php endforeach ?>
+									</li>
+
+
+<!--
 
 									<li class="list-item">
 											<span class="todo-check"></span>
 											<header class="item-header">
-													<h2 class="item-title"><a href="#"><span class="check">&#x25CF;</span><s>To do... 1</s></a></h2>
+													<h2 class="item-title"><a href="#"><span class="check">&#x25CF;</span><s>To DO</s></a></h2>
 											</header>
 											<footer class="item-footer">
 												<ul class="menu">
@@ -281,33 +322,14 @@ div.panel{
 													<span>end at</span>
 													<div class="ligne-item"></div>
 											</footer>
-
 									</li>
 
-									<li class="list-item">
-											<span class="todo-check"></span>
-											<header class="item-header">
-													<h2 class="item-title"><a href="#"><span class="check">&#x25CF;</span><s>To do... 2</s></a></h2>
-											</header>
-											<footer class="item-footer">
-												<ul class="menu">
-														<li class="menu-item">Delete</li>
-														<li class="menu-item">Edit</li>
-												</ul>
-												<div class="item-container">
-														<p>item description</p>
-												</div>
-													<span class="done"><a href="#">&#10004;</a></span>
-													<span>start at</span>
-													<span>end at</span>
-													<div class="ligne-item"></div>
-											</footer>
-									</li>
+
 
                     <li class="list-item">
                         <span class="todo-check"></span>
                         <header class="item-header">
-                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To do... 3</a></h2>
+                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To DO</a></h2>
                         </header>
 
                         <footer class="item-footer" id="footer">
@@ -324,11 +346,13 @@ div.panel{
 														<div class="ligne-item"></div>
                         </footer>
                     </li>
+
+
 
 										<li class="list-item">
                         <span class="todo-check"></span>
                         <header class="item-header">
-                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To do... 4</a></h2>
+                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To DO</a></h2>
                         </header>
 
                         <footer class="item-footer" id="footer">
@@ -345,11 +369,13 @@ div.panel{
 														<div class="ligne-item"></div>
                         </footer>
                     </li>
+
+
 
 										<li class="list-item">
                         <span class="todo-check"></span>
                         <header class="item-header">
-                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To do...</a></h2>
+                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To DO</a></h2>
                         </header>
 
                         <footer class="item-footer" id="footer">
@@ -366,11 +392,13 @@ div.panel{
 														<div class="ligne-item"></div>
                         </footer>
                     </li>
+
+
 
 										<li class="list-item">
                         <span class="todo-check"></span>
                         <header class="item-header">
-                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To do...</a></h2>
+                            <h2 class="item-title"><a href="#"><span class="check">&#9675;</span>To DO</a></h2>
                         </header>
 
                         <footer class="item-footer" id="footer">
@@ -387,11 +415,13 @@ div.panel{
 														<div class="ligne-item"></div>
                         </footer>
                     </li>
+
+
 
 										<li class="list-item">
 												<span class="todo-check"></span>
 												<header class="item-header">
-														<h2 class="item-title"><a href="#"><span class="check-late">&#x25CF;</span><s class="late">To do...</s></a></h2>
+														<h2 class="item-title"><a href="#"><span class="check-late">&#x25CF;</span><s class="late"><? echo $task['task_title'];?></s></a></h2>
 
 												</header>
 
@@ -408,7 +438,8 @@ div.panel{
 														<span>end at</span>
 														<div class="ligne-item"></div>
 												</footer>
-										</li>
+										</li> -->
+
                 </ul>
 
 	</div>
@@ -448,36 +479,35 @@ div.panel{
 
 <div class="container" id="container-next">
 
-
+<form action="" method="POST">
           <h3 class="title">TITLE</h3>
-          <form action="/action_page.php">
-            <input type="text" name="title" value="My todo title">
-        </form>
+
+            <input type="text" name="task_title" value="My todo title">
+
 
         <div class="ligne-item"></div>
 
         <h3>DESCRIPTION</h3>
-        <form action="/action_page.php">
-          <input type="text" name="title" value="My todo description">
-      </form>
+
+          <input type="text" name="task_description" value="My todo description">
+
 
       <div class="ligne-item"></div>
 
-      <h3>START AT</h3>
-      <form action="/action_page.php">
+      <!-- <h3>START AT</h3>
+
         <input type="text" name="title" value="December 12, 2 PM">
-      </form>
+
 
 <div class="ligne-item"></div>
 
       <h3>END AT</h3>
-      <form action="/action_page.php">
-        <input type="text" name="title" value="December 12, 2 PM">
-      </form>
+
+        <input type="text" name="title" value="December 12, 2 PM"> -->
+
 
 
 </div>
-
 
 
 
@@ -487,11 +517,12 @@ div.panel{
     <ul>
   <li class="menu-footer"><a href="#">&nbsp;</a></li>
   <li class="menu-footer"><a href="#">&nbsp;</a></li>
-  <li class="menu-footer"><a href="#">Add task</a></li>
+  <button type="submit" name="addTask" value="addTask">ADD TASK</button>
 
     </ul>
 
   </div>
+</form>
 
 	</div>
 
