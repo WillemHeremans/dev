@@ -45,8 +45,18 @@ border: solid 0px yellow;
 position: inherit;
 width: 90%;
 margin-left: 5%;
-margin-top:5.5%;
+margin-top:7.5%;
 margin-bottom:95px;
+}
+@media screen and (max-width: 675px) {
+  div.container{
+  border: solid 0px yellow;
+  position: inherit;
+  width: 90%;
+  margin-left: 5%;
+  margin-top:25%;
+  margin-bottom:95px;
+  }
 }
 #container:after {
   content: "";
@@ -90,6 +100,18 @@ padding: 20px 0px;
 width: 33.33%;
 }
 li.menu-footer a:hover {
+color: black;
+}
+button.menu-footer  {
+margin-top: 15px;
+display: inline;
+text-align: center;
+padding: 20px 0px;
+width: 33.33%;
+border: none;
+background: none;
+}
+button.menu-footer:hover {
 color: black;
 }
 li.menu a {
@@ -234,6 +256,8 @@ s.late {
   display: block;
 }
 
+form {}
+
 input {
 border:none;
 font-size: 1.25em;
@@ -242,6 +266,7 @@ padding: 0.5%  5%;
 }
 
 h3{
+  font-size: 1.5em;
   margin-top: 2.5%;
 }
 
@@ -280,7 +305,7 @@ div.panel{
 									<li class="list-item">
 											<span class="todo-check"></span>
 											<header class="item-header">
-													<h2 class="item-title"><a href="#"><span class="check">&#x25CF;</span><?php echo $task['task_title'] ?></a></h2>
+													<h3 class="item-title"><a href="#"><span class="check">&#x25CF;</span><?php echo $task['task_title'] ?></a></h3>
 											</header>
 											<footer class="item-footer">
 												<ul class="menu">
@@ -421,7 +446,7 @@ div.panel{
 										<li class="list-item">
 												<span class="todo-check"></span>
 												<header class="item-header">
-														<h2 class="item-title"><a href="#"><span class="check-late">&#x25CF;</span><s class="late"><? echo $task['task_title'];?></s></a></h2>
+														<h2 class="item-title"><a href="#"><span class="check-late">&#x25CF;</span><s class="late">todo</s></a></h2>
 
 												</header>
 
@@ -480,6 +505,7 @@ div.panel{
 <div class="container" id="container-next">
 
 <form action="" method="POST">
+
           <h3 class="title">TITLE</h3>
 
             <input type="text" name="task_title" value="My todo title">
@@ -517,7 +543,7 @@ div.panel{
     <ul>
   <li class="menu-footer"><a href="#">&nbsp;</a></li>
   <li class="menu-footer"><a href="#">&nbsp;</a></li>
-  <button type="submit" name="addTask" value="addTask">ADD TASK</button>
+  <button class="menu-footer" type="submit" name="addTask" value="addTask">ADD TASK</button>
 
     </ul>
 

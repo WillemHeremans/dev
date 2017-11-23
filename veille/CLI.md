@@ -6,7 +6,7 @@
 
 # Historique... UNIX
 
-#Exemples: manip fichiers, killall, xkill, sudo, mkdir, rmdir, rm, mv, wget, tar, unzip, nano, mysql (/opt/lampp/bin/mysql -u root),
+#Exemples: manip fichiers, killall, xkill, sudo, mkdir, rmdir, rm, mv, wget, tar, unzip, nano, mysql (/opt/lampp/bin/mysql -u root), raccourcis clavier
 
 #amusant: eyes
 
