@@ -19,14 +19,17 @@ echo '<header>
     <a href="mail.php"><button class="tablink-alone" id="back-submit">Back</button></a>
 </header>'
 ?>
-
+<?
+echo '<h1 class="second">Votre email est envoyé</h1>
+	<h2 class="second">Merci!</h2>'
+?>
 <!-- Footer menu for include -->
 
 <?php
 
 echo '<footer>
 <form method="post" action="">
-  <input class="tablink-alone" type="submit" name="add" value="add">
+  <input class="tablink-alone" type="submit" name="add" value="Cool!">
   <form>
 </footer>'
 
@@ -34,3 +37,4 @@ echo '<footer>
 
   </body>
 </html>
+
