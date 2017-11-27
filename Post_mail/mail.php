@@ -85,10 +85,6 @@ catch(PDOException $e)
         $subject = test_input($_POST["subject"]);
       }
 
-      if (!empty($_POST)&&isset($_POST['add'])) {
-      	add();
-      }
-
     }
 
     function test_input($data) {
@@ -98,7 +94,9 @@ catch(PDOException $e)
       return $data;
     }
 
-
+if (!empty($_POST)&&isset($_POST['add'])) {
+	add();
+}
 
 function add(){
 	global $bdd;
@@ -142,7 +140,7 @@ function add(){
 
 <!-- Form content -->
 
-	<form  method="post" action="">
+	<form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 	<span class="error">*<?php echo $mail_genderErr;?></span>
 	<label for="mail_gender">Genre</label><br>
