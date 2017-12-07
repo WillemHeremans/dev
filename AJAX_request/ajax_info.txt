@@ -1,0 +1,10 @@
+Bla bla <br />
+
+<b>Hello Wolrd 11111!</b><br />
+
+Ceci est ma requête AJAX.<br />
+
+Ce que contient <i>ce fichier</i> sera affiché dans <span style="color:magenta;">la page HTML (TestAJAX.html)</span>...<br />
+
+SO COOL! B-)
+

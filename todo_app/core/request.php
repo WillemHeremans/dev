@@ -1,7 +1,7 @@
-<?php 
+<?php
 if (!empty($_GET)&&isset($_GET['delete'])){
 	deleteTask($_GET['delete']);
-} 
+}
 $task = selectAll();
 
 
@@ -40,12 +40,14 @@ function deleteTask($id){
 function addTask(){
 	global $bdd;
 
-	$phrase_sql = "INSERT INTO task (task_title, task_description)
-    VALUES (:task_title, :task_description)";
+	$phrase_sql = "INSERT INTO task (task_title, task_description, task_start_timestamp, task_end_timestamp)
+    VALUES (:task_title, :task_description, :task_start_timestamp, :task_end_timestamp)";
 	$preparation = $bdd->prepare($phrase_sql);
 
 	$preparation->bindParam(':task_title',$_POST['task_title'],PDO::PARAM_STR);
 	$preparation->bindParam(':task_description',$_POST['task_description'],PDO::PARAM_STR);
+	$preparation->bindParam(':task_start_timestamp',$_POST['task_start_timestamp'],PDO::PARAM_STR);
+	$preparation->bindParam(':task_end_timestamp',$_POST['task_end_timestamp'],PDO::PARAM_STR);
 
 	if ($preparation->execute()) {
 		header('Location: index.php');

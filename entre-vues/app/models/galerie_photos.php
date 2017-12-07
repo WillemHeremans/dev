@@ -36,6 +36,20 @@
 var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = document.getElementsByTagName("img");
+// var i;
+//
+// for (i = 0; i < img.length; i++) {
+// img[i].onclick = function(){
+// 	var modalImg = document.getElementsByClassName("modal-content");
+// 	var captionText = document.getElementsByTagName("img");
+// 	var modal = document.getElementById('myModal');
+// 	modal.style.display = "block";
+// 	modalImg.src = this.src;
+// 	captionText.innerHTML = this.alt;
+//   }
+// }
+
 var img = document.getElementsByTagName("img")[1];
 var modalImg = document.getElementsByClassName("modal-content")[0];
 var captionText = document.getElementsByTagName("img")[1];
