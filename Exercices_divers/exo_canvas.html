@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exo - Canvas</title>
+</head>
+
+<body>
+
+<canvas id="mon_canvas" width="350"
+height="350">
+Votre navigateur ne suppose pas Canvas :(
+</canvas>
+
+<canvas id="mon_canvas_deux" width="350"
+height="350">
+Votre navigateur ne suppose pas Canvas :(
+</canvas>
+
+<canvas id="mon_canvas_trois" width="350"
+height="350">
+Votre navigateur ne suppose pas Canvas :(
+</canvas>
+
+
+<script type="text/javascript">
+
+//exo 1
+var c =
+document.getElementById("mon_canvas");
+var ctx = c.getContext("2d");
+var rec = c.getContext("2d");
+// ici, le reste du script
+ctx.fillStyle = "#bf4040";
+ctx.fillRect(0, 0, 350, 350);
+rec.fillStyle = "#40a6bf";
+rec.strokeStyle = "white";
+rec.lineWidth=10;
+rec.fillRect(10, 10, 50, 50);
+rec.strokeRect (10, 10, 50, 50);
+
+//exo2
+var c =
+document.getElementById("mon_canvas_deux");
+var ctx = c.getContext("2d");
+var c2 = c.getContext("2d");
+// ici, le reste du script
+ctx.fillStyle = "#bf4040";
+ctx.fillRect(0, 0, 350, 350);
+c2.fillStyle = '#8ae234';
+c2.beginPath();
+c2.moveTo(10, 10);
+c2.lineTo(100, 50);
+c2.lineTo(50, 100);
+c2.lineTo(10, 90);
+c2.closePath();
+c2.fill();
+
+//exo 3
+var c =
+document.getElementById("mon_canvas_trois");
+var ctx = c.getContext("2d");
+var cerc = c.getContext("2d");
+// ici, le reste du script
+ctx.fillStyle = "#bf4040";
+ctx.fillRect(0, 0, 350, 350);
+cerc.fillStyle = "#5c3566";
+cerc.beginPath();
+cerc.arc(95,95,55,0,Math.PI*2,true);
+cerc.closePath();
+cerc.fill();
+
+</script>
+</body>
+
+</html>

@@ -23,10 +23,13 @@ for (i = 0; i < todo.length; i++) {
 todo[i].onclick = function(){
 var main = document.getElementById('first');
 var update = document.getElementById('third');
+var taskTitleMain = document.getElementsByClassName('span-item-title')[3].textContent;
+var taskTitleInput = document.getElementById("taskTitle");
     main.style.display = 'none';
     update.style.display = 'block';
-//    modalImg.src = this.src;
-//    captionText.innerHTML = this.alt;
+    taskTitleInput.value = taskTitleMain;
+
+
   }
 }
 
@@ -115,4 +118,3 @@ var update = document.getElementById('third');
 // }
 //
 // }
-

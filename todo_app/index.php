@@ -42,7 +42,7 @@ include_once './core/request.php';
 									<li class="list-item">
 											<span class="todo-check"></span>
 											<header class="item-header">
-													<h3 class="item-title"><a href="#"><span class="check">&#x25CF;</span><?php echo $task['task_title'] ?></a></h3>
+													<h3 class="item-title"><a href="#"><span class="check">&#x25CF;</span><span class="span-item-title"><?php echo $task['task_title'] ?></span></a></h3>
 											</header>
 											<footer class="item-footer">
 												<ul class="menu">
@@ -204,7 +204,7 @@ include_once './core/request.php';
 
           <h3 class="title">TITLE</h3>
 
-            <input size="100%" type="text" name="task_title" value="<? echo $task['task_title']; ?>">
+            <input id="taskTitle" size="100%" type="text" name="task_title" value="">
 
 
         <div class="ligne-item"></div>
