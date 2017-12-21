@@ -23,15 +23,23 @@ for (i = 0; i < todo.length; i++) {
 todo[i].onclick = function(){
 var main = document.getElementById('first');
 var update = document.getElementById('third');
-var taskTitleMain = document.getElementsByClassName('span-item-title')[3].textContent;
+main.style.display = 'none';
+update.style.display = 'block';
+var taskTitleMain = document.getElementsByClassName('span-item-title')[0].textContent;
 var taskTitleInput = document.getElementById("taskTitle");
-    main.style.display = 'none';
-    update.style.display = 'block';
-    taskTitleInput.value = taskTitleMain;
+taskTitleInput.value = taskTitleMain;
 
+for (var j = 0; j < taskTitleMain.length; j++) {
+
+
+}
 
   }
+
 }
+//non fonctionnel:
+
+
 
 
 

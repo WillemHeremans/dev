@@ -1,0 +1,74 @@
+.of-logo, .of-logo *,
+.of-logo-animate, .of-logo-animate *{
+    -webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;  
+	box-sizing: border-box;
+}
+.of-logo,
+.of-logo-animate{
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px; width: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    border: 3px solid transparent;
+    border-left-color: #27ae60;
+    border-right-color: #e67e22;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.8;
+}
+.of-logo:before,
+.of-logo-animate:before{
+    content: "";
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    border: 1px solid transparent;
+    border-left-color: #27ae60;
+    border-right-color: #e67e22;
+    position: absolute;
+    top: 8px; left: 8px;
+    bottom: 8px; right: 8px;
+    line-height: 55px;
+    opacity: 0.4;
+    font-weight: 800;
+}
+.of-logo:after,
+.of-logo-animate:after{
+    content: "";
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    border: 2px solid transparent;
+    border-top-color: #27ae60;
+    border-bottom-color: #e67e22;
+    position: absolute;
+    top: 3px; left: 3px;
+    bottom: 3px; right: 3px;
+    opacity: 0.6;
+}
+
+.of-logo-animate{
+    animation: spin 3s linear infinite;
+}
+.of-logo-animate:before{
+    animation: spin 1s linear infinite;
+}
+.of-logo-animate:after{
+    animation: spinreverse 2s linear infinite;
+}
+.of-logo-animate:hover{
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+
+@keyframes spinreverse{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(-360deg); }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "eos",
+  "version": "1.0.0",
+  "description": "eos",
+  "main": "index.js",
+  "scripts": {
+    "test": "testeos"
+  },
+  "keywords": [
+    "eos"
+  ],
+  "author": "Juan Manuel Cely Ramos",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^1.5.0"
+  }
+}

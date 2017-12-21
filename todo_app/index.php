@@ -204,7 +204,7 @@ include_once './core/request.php';
 
           <h3 class="title">TITLE</h3>
 
-            <input id="taskTitle" size="100%" type="text" name="task_title" value="">
+            <input id="taskTitle" size="100%" type="text" name="task_title">
 
 
         <div class="ligne-item"></div>
