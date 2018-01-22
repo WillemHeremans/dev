@@ -2,6 +2,7 @@
 if (!empty($_GET)&&isset($_GET['delete'])){
 	deleteTask($_GET['delete']);
 }
+
 $task = selectAll();
 
 
