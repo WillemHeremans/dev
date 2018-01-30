@@ -7,7 +7,7 @@
 	</head>
 
 	<?php
-	echo "<table style='border: solid 1px black;'>";
+	echo "<body><table style='border: solid 1px black;'>";
 
 
 	class TableRows extends RecursiveIteratorIterator {
@@ -37,7 +37,7 @@
 	try {
 	    $conn = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	    $stmt = $conn->prepare("SELECT * FROM profils WHERE	pref_1='L\'ambiance'");
+	    $stmt = $conn->prepare("SELECT * FROM profils");
 	    $stmt->execute();
 
 
@@ -52,7 +52,7 @@
 	    echo "Error: " . $e->getMessage();
 	}
 	$conn = null;
-	echo "</table>";
+	echo "</table></body>";
 	?>
 
 

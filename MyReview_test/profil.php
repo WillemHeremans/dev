@@ -18,7 +18,7 @@ echo '
 <!DOCTYPE html>
 <html>
 <head>
-<title>PROFIL</title>
+<title>PROFIL de ' .$data['pseudo']. '</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta charset="UTF-8"/>
 <title>MyReview: Profil de ' .$data['pseudo']. '</title>

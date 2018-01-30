@@ -1,0 +1,14 @@
+{
+  "name": "test-mongo-nodejs",
+  "version": "1.0.0",
+  "description": "test de connexion et requêtes entre mongodb et nodejs, utilisant le driver/module 'mongodb'",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "myself",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.0.2"
+  }
+}
