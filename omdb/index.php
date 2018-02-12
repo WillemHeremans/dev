@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<h1 class="byline">Recherche via Open Movie Database</h1>
+	<h1 class="byline">Recherche via Open Movie Database & MusicBrainz</h1>
 
   <form class="form-wrapper cf" action="http://www.omdbapi.com/" method="get" target="_blank">
 
@@ -19,15 +19,18 @@
   </form>
 
 
-<!-- 
-<form class="form-wrapper cf" action="https://api-endpoint.igdb.com/games/" method="get" target="_blank">
 
-      <input type="text" placeholder="Entrez un titre de jeux vidéo..." name="t">
-      <input type="hidden" name="user_key" value="06206e20b60580e091e3ec2118187bdf">
+<form class="form-wrapper cf" action="http://musicbrainz.org/ws/2/artist/" method="get" target="_blank">
+
+      <input type="text" placeholder="Entrez le nom d'un musicien/groupe..." name="query">
+      <input type="hidden" name="fmt" value="json">
+      <input type="hidden" name="limit" value="5">
+      <input type="hidden" name="inc" value="recordings">
+      
     
       <button type="submit">Chercher</button>
 
   </form>
- -->
+ 
 </body>
 </html>
