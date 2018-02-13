@@ -31,6 +31,16 @@
       <button type="submit">Chercher</button>
 
   </form>
+
+
+<form class="form-wrapper cf" action="https://api.discogs.com/database/search" method="get" target="_blank">
+
+      <input type="text" placeholder="Entrez le nom d'un musicien/groupe..." name="q">
+      <input type="hidden" name="token" value="nZBrCwWyCkHIIVGOlPegHjcnjOMrUGKcAeQYmtGv">
+      
+      <button type="submit">Chercher</button>
+
+</form>
  
 </body>
 </html>
