@@ -76,7 +76,7 @@ button:hover, a:hover {
     <a href="#"><i class="fa fa-linkedin"></i></a>  
     <a href="#"><i class="fa fa-facebook"></i></a> 
  </div>
- <p><button>Contact</button></p>
+ <p><a href="SessDestroy.php"><button>Log out</button></a></p>
 </div>
 
 </body>

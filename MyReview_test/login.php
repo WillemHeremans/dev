@@ -159,7 +159,7 @@ span.psw {
 </head>
 <body>
 
-<h2>Modal Login Form</h2>
+<h2>MyReview app ;-)</h2>
 
 <button onclick="document.getElementById(`id01`).style.display=`block`" style="width:auto;">Login</button>
 
@@ -183,7 +183,7 @@ span.psw {
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById(`id01`).style.display=`none`" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="psw"><a href="account.php">Create a acount</a></span>
     </div>
   </form>
 </div>
