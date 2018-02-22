@@ -14,7 +14,11 @@ include_once 'request.php';
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
-  <title>FORMULAIRE</title>
+  <title>Créer un compte sur MyReview!</title>
+<style>
+
+</style>
+
 </head>
 <body>
 
@@ -33,20 +37,23 @@ include_once 'request.php';
 <label>Quelle est votre tranche d'âge ?</label>
 
     <select name="age" form="Pref">
-  <option value="-18">-18 ans</option>
-  <option value="18-25">18-25 ans</option>
-  <option value="25-35">25-35 ans</option>
-  <option value="35_plus">+35 ans</option>
+  <option value="-18 ans">-18 ans</option>
+  <option value="18-25 ans">18-25 ans</option>
+  <option value="26-35 ans">26-35 ans</option>
+  <option value="+35 ans">+35 ans</option>
 </select>
 <br />
 <br />
+
+<div id="pref">
 <label>Choisissez votre préférence N°1!</label>
 
 <select name="pref_1" form="Pref" id="Pref_1">
-  <option value="Ambiance">L'ambiance</option>
-  <option value="Service">Le service</option>
-  <option value="Responsable">Responsable ( bio, proximité, etc)</option>
-  <option value="Rapidité">La rapidité</option>
+<option disabled selected value> -- Select an option -- </option>
+  <option value="L'ambiance">L'ambiance</option>
+  <option value="Le service">Le service</option>
+  <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
+  <option value="La rapidité">La rapidité</option>
   <option value="Type de cuisine">Type de cuisine</option>
 </select>
 <br />
@@ -54,10 +61,11 @@ include_once 'request.php';
 <label>Choisissez votre préférence N°2</label>
 
 <select name="pref_2" form="Pref" id="Pref_2">
-  <option value="Ambiance">L'ambiance</option>
-  <option value="Service">Le service</option>
-  <option value="Responsable">Responsable ( bio, proximité, etc)</option>
-  <option value="Rapidité">La rapidité</option>
+<option disabled selected value> -- Select an option -- </option>
+  <option value="L'ambiance">L'ambiance</option>
+  <option value="Le service">Le service</option>
+  <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
+  <option value="La rapidité">La rapidité</option>
   <option value="Type de cuisine">Type de cuisine</option>
 </select>
 <br />
@@ -65,10 +73,11 @@ include_once 'request.php';
 <label>Choisissez votre préférence N°3</label>
 
 <select name="pref_3" form="Pref" id="Pref_3">
-  <option value="Ambiance">L'ambiance</option>
-  <option value="Service">Le service</option>
-  <option value="Responsable">Responsable ( bio, proximité, etc)</option>
-  <option value="Rapidité">La rapidité</option>
+<option disabled selected value> -- Select an option -- </option>
+  <option value="L'ambiance">L'ambiance</option>
+  <option value="Le service">Le service</option>
+  <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
+  <option value="La rapidité">La rapidité</option>
   <option value="Type de cuisine">Type de cuisine</option>
 </select>
 <br />
@@ -76,10 +85,11 @@ include_once 'request.php';
 <label>Choisissez votre préférence N°4!</label>
 
 <select name="pref_4" form="Pref" id="Pref_4">
-  <option value="Ambiance">L'ambiance</option>
-  <option value="Service">Le service</option>
-  <option value="Responsable">Responsable ( bio, proximité, etc)</option>
-  <option value="Rapidité">La rapidité</option>
+<option disabled selected value> -- Select an option -- </option>
+  <option value="L'ambiance">L'ambiance</option>
+  <option value="Le service">Le service</option>
+  <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
+  <option value="La rapidité">La rapidité</option>
   <option value="Type de cuisine">Type de cuisine</option>
 </select>
 <br />
@@ -87,24 +97,27 @@ include_once 'request.php';
 <label>Choisissez votre préférence N°5!</label>
 
 <select name="pref_5" form="Pref" id="Pref_5">
-  <option value="Ambiance">L'ambiance</option>
-  <option value="Service">Le service</option>
-  <option value="Responsable">Responsable ( bio, proximité, etc)</option>
-  <option value="Rapidité">La rapidité</option>
+<option disabled selected value> -- Select an option -- </option>
+  <option value="L'ambiance">L'ambiance</option>
+  <option value="Le service">Le service</option>
+  <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
+  <option value="La rapidité">La rapidité</option>
   <option value="Type de cuisine">Type de cuisine</option>
 </select>
 <br />
 <br />
+</id>
 
-
+<div id="lieu" style="display:none;">
 
 <label>Choisissez votre lieu N°1!</label>
 
 <select name="lieu_1" form="Pref" id="Lieu_1">
-  <option value="Cuisine du monde">Cuisine du monde (asiatique,...)</option>
+<option disabled selected value> -- Select an option -- </option>
+  <option value="Cuisine du monde (asiatique,...)">Cuisine du monde (asiatique,...)</option>
   <option value="Brasserie">Brasserie</option>
-  <option value="BIO">BIO (exki...)</option>
-  <option value="Fast food">Fast food (quick...)</option>
+  <option value="BIO (exki...)">BIO (exki...)</option>
+  <option value="Fast food (quick...)">Fast food (quick...)</option>
   <option value="Gastronomique">Gastronomique</option>
 </select>
 <br />
@@ -112,10 +125,11 @@ include_once 'request.php';
 <label>Choisissez votre lieu N°2</label>
 
 <select name="lieu_2" form="Pref" id="Lieu_2">
-  <option value="Cuisine du monde">Cuisine du monde (asiatique,...)</option>
+<option disabled selected value> -- Select an option -- </option>
+  <option value="Cuisine du monde (asiatique,...)">Cuisine du monde (asiatique,...)</option>
   <option value="Brasserie">Brasserie</option>
-  <option value="BIO">BIO (exki...)</option>
-  <option value="Fast food">Fast food (quick...)</option>
+  <option value="BIO (exki...)">BIO (exki...)</option>
+  <option value="Fast food (quick...)">Fast food (quick...)</option>
   <option value="Gastronomique">Gastronomique</option>
 </select>
 <br />
@@ -123,10 +137,11 @@ include_once 'request.php';
 <label>Choisissez votre lieu N°3</label>
 
 <select name="lieu_3" form="Pref" id="Lieu_3">
-  <option value="Cuisine du monde">Cuisine du monde (asiatique,...)</option>
+<option disabled selected value> -- Select an option -- </option>
+  <option value="Cuisine du monde (asiatique,...)">Cuisine du monde (asiatique,...)</option>
   <option value="Brasserie">Brasserie</option>
-  <option value="BIO">BIO (exki...)</option>
-  <option value="Fast food">Fast food (quick...)</option>
+  <option value="BIO (exki...)">BIO (exki...)</option>
+  <option value="Fast food (quick...)">Fast food (quick...)</option>
   <option value="Gastronomique">Gastronomique</option>
 </select>
 <br />
@@ -134,10 +149,11 @@ include_once 'request.php';
 <label>Choisissez votre lieu N°4!</label>
 
 <select name="lieu_4" form="Pref" id="Lieu_4">
-  <option value="Cuisine du monde">Cuisine du monde (asiatique,...)</option>
+<option disabled selected value> -- Select an option -- </option>
+  <option value="Cuisine du monde (asiatique,...)">Cuisine du monde (asiatique,...)</option>
   <option value="Brasserie">Brasserie</option>
-  <option value="BIO">BIO (exki...)</option>
-  <option value="Fast food">Fast food (quick...)</option>
+  <option value="BIO (exki...)">BIO (exki...)</option>
+  <option value="Fast food (quick...)">Fast food (quick...)</option>
   <option value="Gastronomique">Gastronomique</option>
 </select>
 <br />
@@ -145,20 +161,23 @@ include_once 'request.php';
 <label>Choisissez votre lieu N°5!</label>
 
 <select name="lieu_5" form="Pref" id="Lieu_5">
-  <option value="Cuisine du monde">Cuisine du monde (asiatique,...)</option>
+<option disabled selected value> -- Select an option -- </option>
+  <option value="Cuisine du monde (asiatique,...)">Cuisine du monde (asiatique,...)</option>
   <option value="Brasserie">Brasserie</option>
-  <option value="BIO">BIO (exki...)</option>
-  <option value="Fast food">Fast food (quick...)</option>
+  <option value="BIO (exki...)">BIO (exki...)</option>
+  <option value="Fast food (quick...)">Fast food (quick...)</option>
   <option value="Gastronomique">Gastronomique</option>
 </select>
 <br />
 <br />
 <br />
-
+</div>
 
     <input type="hidden" value="Submit" name="addData" id="submit">
 
   </form>
+<br />
+<p><a href="login.php">Go to login...</a></p>
 
 
 <script type="text/javascript">
@@ -187,6 +206,11 @@ alert("Attention!\nUn choix différent par ligne!");
 
 else if (prefQuatre.value == prefCinq.value) {
 alert("Attention!\nUn choix différent par ligne!");
+}
+
+else {
+
+document.getElementById("lieu").style = "display:block;";
 }
 
 }

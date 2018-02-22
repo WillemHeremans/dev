@@ -1,18 +1,41 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Recherche via Open Movie Database</title>
+</head>
+<body>
 
-$url = 'https://www.omdbapi.com/?t=+THE+SHAPE+OF+WATER&apikey=b9957574'; // path to your JSON file
-$data = file_get_contents($url); // put the contents of the file into a variable
-$characters = json_decode($data); // decode the JSON feed
+	<h1 class="byline">Recherche via Open Movie Database & MusicBrainz</h1>
 
-echo $characters->Title . '<br>';
-echo $characters->Year . '<br>';
+  <form class="form-wrapper cf" action="endpoint.php" method="post" target="_blank">
 
-echo '<img src="'.$characters->Poster.'" alt="Affiche">';
+      <input type="text" placeholder="Entrez un titre de film..." name="t" id="title">
+      <input type="hidden" name="apikey" value="b9957574">
+    
+      <button type="submit">Chercher</button>
 
-#foreach ($characters as $character) {
-#	echo $character . '<br>';
-#}
+  </form>
+
+<script type="text/javascript">
+var inpt = document.getElementById("title");
+
+
+inpt.onchange = function chgval () {
+
+
+alert(inpt.value.replace(/\s/g, "+"));
+
+}
+
+</script>
+
+ 
+</body>
+</html>
 
 
 
-?>
+
+

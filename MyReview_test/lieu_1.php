@@ -37,7 +37,8 @@
 	try {
 	    $conn = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	    $stmt = $conn->prepare("SELECT * FROM profils");
+	    $stmt = $conn->prepare("SELECT * FROM profils WHERE lieu_1 = :lieu_1");
+            $stmt->bindValue(':lieu_1',$_COOKIE['lieu'], PDO::PARAM_STR);
 	    $stmt->execute();
 
 
@@ -49,7 +50,7 @@
 	    }
 	}
 	catch(PDOException $e) {
-	    echo "Error: " . $e->getMessage();
+	    echo "Error: " . $e->getMesslieu_1();
 	}
 	$conn = null;
 	echo "</table></body>";

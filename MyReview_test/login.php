@@ -183,7 +183,7 @@ span.psw {
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById(`id01`).style.display=`none`" class="cancelbtn">Cancel</button>
-      <span class="psw"><a href="account.php">Create a acount</a></span>
+      <span class="psw"><a href="account.php">Create a account</a></span>
     </div>
   </form>
 </div>
@@ -210,7 +210,10 @@ if (isset($_POST['souvenir']))
 
 $expire = time() + 365*24*3600;
 
-setcookie('pseudo', $_SESSION['pseudo'], $expire); 
+setcookie('pseudo', $_SESSION['pseudo'], $expire);
+setcookie('age', $data['age'], $expire);
+setcookie('pref', $data['pref_1'], $expire);
+setcookie('lieu', $data['lieu_1'], $expire); 
 
 }
 

@@ -67,11 +67,11 @@ button:hover, a:hover {
 <div class="card">
   <img src="avatar-1606916_1280.resized.png" alt="avatar" style="width:100%">
   <h1>' .$data['pseudo'].'</h1>
-  <p class="title">' .$data['age'].'</p>
-  <p>Ma préférence: <a href="MyReview.php"><b>' .$data['pref_1']. '</b></a></p> 
-  <p>Mon lieu: <b>'.$data['lieu_1'].'</b></p>
+  <p class="title"><a href="age.php">' .$data['age'].'</a></p>
+  <p>Ma préférence: <a href="pref_1.php"><b>' .$data['pref_1']. '</b></a></p> 
+  <p>Mon lieu: <b><a href="lieu_1.php">'.$data['lieu_1'].'</a></b></p>
   <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-search"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a>  
     <a href="#"><i class="fa fa-linkedin"></i></a>  
     <a href="#"><i class="fa fa-facebook"></i></a> 
