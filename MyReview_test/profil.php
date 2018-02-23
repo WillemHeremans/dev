@@ -71,7 +71,7 @@ button:hover, a:hover {
   <p>Ma préférence: <a href="pref_1.php"><b>' .$data['pref_1']. '</b></a></p> 
   <p>Mon lieu: <b><a href="lieu_1.php">'.$data['lieu_1'].'</a></b></p>
   <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-search"></i></a> 
+    <a href="../omdb/manipJSON.php"><i class="fa fa-search"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a>  
     <a href="#"><i class="fa fa-linkedin"></i></a>  
     <a href="#"><i class="fa fa-facebook"></i></a> 

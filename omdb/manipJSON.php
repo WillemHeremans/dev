@@ -7,9 +7,9 @@
 </head>
 <body>
 
-	<h1 class="byline">Recherche via Open Movie Database & MusicBrainz</h1>
+	<h1 class="byline">Recherche via Open Movie Database</h1>
 
-  <form class="form-wrapper cf" action="endpoint.php" method="post" target="_blank">
+  <form class="form-wrapper cf" action="endpoint.php" method="get" target="_blank">
 
       <input type="text" placeholder="Entrez un titre de film..." name="t" id="title">
       <input type="hidden" name="apikey" value="b9957574">
@@ -19,13 +19,13 @@
   </form>
 
 <script type="text/javascript">
-var inpt = document.getElementById("title");
+//var inpt = document.getElementById("title");
 
 
-inpt.onchange = function chgval () {
+//inpt.onchange = function chgval () {
 
 
-alert(inpt.value.replace(/\s/g, "+"));
+//alert(inpt.value.replace(/\s/g, "+"));
 
 }
 

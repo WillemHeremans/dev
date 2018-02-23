@@ -23,7 +23,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 
 //Set the URL that you want to GET by using the CURLOPT_URL option.
-curl_setopt($ch, CURLOPT_URL, 'https://api-endpoint.igdb.com/games/?search=medievil');
+curl_setopt($ch, CURLOPT_URL, 'https://api-endpoint.igdb.com/games/?search=medievil&fields=%2A');
 
 
  
