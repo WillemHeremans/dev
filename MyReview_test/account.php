@@ -45,6 +45,26 @@ include_once 'request.php';
 <br />
 <br />
 
+<br />
+
+<label>Choisissez un avatar :</label>
+<br />
+<br />
+<label><img src="default.png" height="50px" width="50px" /></label>
+<input type="radio" name="avatar" value="default.png">
+<br />
+<label><img src="woman.png" height="50px" width="50px" /></label>
+<input type="radio" name="avatar" value="default.png">
+<br />
+<label><img src="garcon.png" height="50px" width="50px" /></label>
+<input type="radio" name="avatar" value="default.png">
+<br />
+<label><img src="woman-pro.png" height="50px" width="50px" /></label>
+<input type="radio" name="avatar" value="default.png">
+ 
+<br />
+<br />
+
 <div id="pref">
 <label>Choisissez votre préférence N°1!</label>
 

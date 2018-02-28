@@ -18,10 +18,9 @@ echo '
 <!DOCTYPE html>
 <html>
 <head>
-<title>PROFIL de ' .$data['pseudo']. '</title>
+<title>MyReview: Profil de ' .$data['pseudo']. '</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta charset="UTF-8"/>
-<title>MyReview: Profil de ' .$data['pseudo']. '</title>
 <style>
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -65,11 +64,11 @@ button:hover, a:hover {
 <h2 style="text-align:center">Profil de ' .$data['pseudo']. '</h2>
 
 <div class="card">
-  <img src="avatar-1606916_1280.resized.png" alt="avatar" style="width:100%">
+  <img src="' .$data['avatar'].'" alt="avatar" style="width:100%">
   <h1>' .$data['pseudo'].'</h1>
-  <p class="title"><a href="age.php">' .$data['age'].'</a></p>
-  <p>Ma préférence: <a href="pref_1.php"><b>' .$data['pref_1']. '</b></a></p> 
-  <p>Mon lieu: <b><a href="lieu_1.php">'.$data['lieu_1'].'</a></b></p>
+  <p class="title"><a href="age2.php">' .$data['age'].'</a></p>
+  <p>Ma préférence: <a href="pref_1_v2.php"><b>' .$data['pref_1']. '</b></a></p> 
+  <p>Mon lieu: <b><a href="lieu_1_v2.php">'.$data['lieu_1'].'</a></b></p>
   <div style="margin: 24px 0;">
     <a href="../omdb/manipJSON.php"><i class="fa fa-search"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a>  

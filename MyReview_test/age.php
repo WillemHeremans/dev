@@ -3,7 +3,7 @@
 <body>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>MyReview</title>
+		<title>Matching</title>
 	</head>
 
 	<?php
