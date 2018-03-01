@@ -5,12 +5,12 @@ include_once './core/config.php';
 
 include_once './core/connexion.php';
 
-if (isset($_COOKIE['pref']))
+if (isset($_COOKIE['sexe']))
 
 {
 
-$query=$bdd->prepare('SELECT * FROM profils WHERE pref_1 = :pref_1 AND pseudo != :pseudo');
-$query->bindValue(':pref_1',$_COOKIE['pref'], PDO::PARAM_STR);
+$query=$bdd->prepare('SELECT * FROM profils WHERE sexe = :sexe AND pseudo != :pseudo');
+$query->bindValue(':sexe',$_COOKIE['sexe'], PDO::PARAM_STR);
 $query->bindValue(':pseudo',$_COOKIE['pseudo'], PDO::PARAM_STR);
 $query->execute();
 $data=$query->fetchAll( PDO::FETCH_ASSOC );
@@ -119,10 +119,10 @@ button:hover, a:hover {
 <h2 style="text-align:center">Match avec <?php echo $data['pseudo'] ?></h2>
 
 <div class="card" style="<?php echo $gold ?>">
-  <img src="./image/<?php echo $data['avatar'] ?>" alt="avatar" style="width:100%;">
+  <img src="./image/<?php echo $data['avatar'] ?>" alt="avatar" style="width:100%">
   <h1><?php echo $data['pseudo'] ?></h1>
-  <p class="title"><a href="age.php"><?php echo $data['age'] ?></a> / <a href="#"><i class="<?php echo $sexe ?>"></i></a></p>
-  <p>Ma préférence: <a href="pref_1.php" style="color:red"><b><?php echo $data['pref_1'] ?></b></a></p> 
+  <p class="title"><a href="age.php"><?php echo $data['age'] ?></a> / <a href="#" style="color:magenta"><i class="<?php echo $sexe ?>"></i></a></p>
+  <p>Ma préférence: <a href="pref_1.php"><b><?php echo $data['pref_1'] ?></b></a></p> 
   <p>Mon lieu: <b><a href="lieu_1.php"><?php echo $data['lieu_1'] ?></a></b></p>
   <div style="margin: 24px 0;">
     <a href="../omdb/manipJSON.php"><i class="fa fa-search"></i></a> 

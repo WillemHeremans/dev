@@ -11,5 +11,5 @@ setcookie('lieu', '', -1);
 
 }
 session_destroy();
-header('Location: login.php');
+header('Location: ../login.php');
 ?>

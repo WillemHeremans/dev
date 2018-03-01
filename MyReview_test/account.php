@@ -1,15 +1,24 @@
 <?php
 
-include_once 'config.php';
+include_once './core/config.php';
 
-include_once 'connexion.php';
+include_once './core/connexion.php';
 
-include_once 'request.php';
+include_once './core/request.php';
 
-?>
+$query=$bdd->prepare('SELECT pseudo FROM profils');
+$query->execute();
+$data=$query->fetch( PDO::FETCH_ASSOC );
 
+if (isset($_POST['pseudo'])) {
 
-<!DOCTYPE html>
+echo "Le pseudo existe déjà";
+
+}
+
+else echo 
+
+'<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -28,13 +37,13 @@ include_once 'request.php';
     <h1>Créer un compte</h1>
 
     <div class="pseudo">
-      <label for="">Pseudo</label><br>
+      <label for="">Pseudo :</label><br>
       <input type="text" placeholder="Choisissez votre pseudo..." name="pseudo" value="" id="pseudo">
     </div>
 
 <br />
 
-<label>Quelle est votre tranche d'âge ?</label>
+<label>Quelle est votre tranche d\'âge ?</label>
 
     <select name="age" form="Pref">
   <option value="-18 ans">-18 ans</option>
@@ -44,23 +53,31 @@ include_once 'request.php';
 </select>
 <br />
 <br />
-
+<label>Votre sexe :</label>
+<br />
+<br />
+<label>Féminin</label>
+<input type="radio" name="sexe" value="F">
+<br />
+<label>Masculin</label>
+<input type="radio" name="sexe" value="M">
+<br />
 <br />
 
 <label>Choisissez un avatar :</label>
 <br />
 <br />
-<label><img src="default.png" height="50px" width="50px" /></label>
+<label><img src="./image/default.png" height="50px" width="50px" /></label>
 <input type="radio" name="avatar" value="default.png">
 <br />
-<label><img src="woman.png" height="50px" width="50px" /></label>
-<input type="radio" name="avatar" value="default.png">
+<label><img src="./image/woman.png" height="50px" width="50px" /></label>
+<input type="radio" name="avatar" value="woman.png">
 <br />
-<label><img src="garcon.png" height="50px" width="50px" /></label>
-<input type="radio" name="avatar" value="default.png">
+<label><img src="./image/garcon.png" height="50px" width="50px" /></label>
+<input type="radio" name="avatar" value="garcon.png">
 <br />
-<label><img src="woman-pro.png" height="50px" width="50px" /></label>
-<input type="radio" name="avatar" value="default.png">
+<label><img src="./image/woman-pro.png" height="50px" width="50px" /></label>
+<input type="radio" name="avatar" value="woman-pro.png">
  
 <br />
 <br />
@@ -70,7 +87,7 @@ include_once 'request.php';
 
 <select name="pref_1" form="Pref" id="Pref_1">
 <option disabled selected value> -- Select an option -- </option>
-  <option value="L'ambiance">L'ambiance</option>
+  <option value="L\'ambiance">L\'ambiance</option>
   <option value="Le service">Le service</option>
   <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
   <option value="La rapidité">La rapidité</option>
@@ -82,7 +99,7 @@ include_once 'request.php';
 
 <select name="pref_2" form="Pref" id="Pref_2">
 <option disabled selected value> -- Select an option -- </option>
-  <option value="L'ambiance">L'ambiance</option>
+  <option value="L\'ambiance">L\'ambiance</option>
   <option value="Le service">Le service</option>
   <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
   <option value="La rapidité">La rapidité</option>
@@ -94,7 +111,7 @@ include_once 'request.php';
 
 <select name="pref_3" form="Pref" id="Pref_3">
 <option disabled selected value> -- Select an option -- </option>
-  <option value="L'ambiance">L'ambiance</option>
+  <option value="L\'ambiance">L\'ambiance</option>
   <option value="Le service">Le service</option>
   <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
   <option value="La rapidité">La rapidité</option>
@@ -106,7 +123,7 @@ include_once 'request.php';
 
 <select name="pref_4" form="Pref" id="Pref_4">
 <option disabled selected value> -- Select an option -- </option>
-  <option value="L'ambiance">L'ambiance</option>
+  <option value="L\'ambiance">L\'ambiance</option>
   <option value="Le service">Le service</option>
   <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
   <option value="La rapidité">La rapidité</option>
@@ -118,7 +135,7 @@ include_once 'request.php';
 
 <select name="pref_5" form="Pref" id="Pref_5">
 <option disabled selected value> -- Select an option -- </option>
-  <option value="L'ambiance">L'ambiance</option>
+  <option value="L\'ambiance">L\'ambiance</option>
   <option value="Le service">Le service</option>
   <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
   <option value="La rapidité">La rapidité</option>
@@ -198,8 +215,8 @@ include_once 'request.php';
   </form>
 <br />
 <p><a href="login.php">Go to login...</a></p>
-
-
+'
+?>
 <script type="text/javascript">
 var prefUn = document.getElementById("Pref_1");
 var prefDeux = document.getElementById("Pref_2");

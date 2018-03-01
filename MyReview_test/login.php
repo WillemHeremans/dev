@@ -4,9 +4,9 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-include_once 'config.php';
+include_once './core/config.php';
 
-include_once 'connexion.php';
+include_once './core/connexion.php';
 
 
 
@@ -168,7 +168,7 @@ span.psw {
   <form class="modal-content animate" action="login.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById(`id01`).style.display=`none`" class="close" title="Close Modal">&times;</span>
-      <img src="logo.png" alt="Avatar" class="avatar" height="50%" width="50%">
+      <img src="./image/logo.png" alt="Avatar" class="avatar" height="50%" width="50%">
     </div>
 
     <div class="container">
@@ -212,8 +212,10 @@ $expire = time() + 365*24*3600;
 
 setcookie('pseudo', $_SESSION['pseudo'], $expire);
 setcookie('age', $data['age'], $expire);
+setcookie('sexe', $data['sexe'], $expire); 
 setcookie('pref', $data['pref_1'], $expire);
-setcookie('lieu', $data['lieu_1'], $expire); 
+setcookie('lieu', $data['lieu_1'], $expire);
+
 
 }
 

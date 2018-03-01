@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-include_once 'config.php';
+include_once './core/config.php';
 
-include_once 'connexion.php';
+include_once './core/connexion.php';
 
 if (isset($_COOKIE['age']))
 
@@ -21,27 +21,48 @@ $data=$query->fetchAll( PDO::FETCH_ASSOC );
 <?php foreach($data as $data): ?>
 <?php
  
-if($data['pref_1'] == $_COOKIE['pref'] && $data['lieu_1'] == $_COOKIE['lieu']) 
+if($data['pref_1'] == $_COOKIE['pref'] && $data['lieu_1'] == $_COOKIE['lieu'] && $data['sexe'] == $_COOKIE['sexe']) 
 
 {
 $rate = "100%";
 $gold = "border: 5px solid gold;";
 }
 
-else if ($data['pref_1'] == $_COOKIE['pref'] || $data['lieu_1'] == $_COOKIE['lieu'])
+else if (($data['pref_1'] == $_COOKIE['pref'] && $data['lieu_1'] == $_COOKIE['lieu']) || ($data['pref_1'] == $_COOKIE['pref'] && $data['sexe'] == $_COOKIE['sexe']) || ($data['sexe'] == $_COOKIE['sexe'] && $data['lieu_1'] == $_COOKIE['lieu']))
 
 {
-$rate = "66,66%";
-$gold = "border: 5px solid silver;";
+$rate = "75%";
+$gold = "border: none;";
+}
+
+else if ($data['pref_1'] == $_COOKIE['pref'] || $data['lieu_1'] == $_COOKIE['lieu'] ||  $data['sexe'] == $_COOKIE['sexe'])
+
+{
+$rate = "50%";
+$gold = "border: none;";
 }
 
 
 else {
-$rate = "33,33%";
+$rate = "25%";
 $gold = "border: none;";
 }
 
 ?>
+
+<?php
+
+if ($data['sexe'] == "F")
+{
+$sexe = "fa fa-venus";
+}
+
+else {
+$sexe = "fa fa-mars";
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -91,21 +112,19 @@ button:hover, a:hover {
 </head>
 <body>
 
-<div style="display: inline-block;">
+<div style="display: inline-block; max-width:300px; min-width:300px;">
 
 <h2 style="text-align:center">Match avec <?php echo $data['pseudo'] ?></h2>
 
 <div class="card" style="<?php echo $gold ?>">
-  <img src="<?php echo $data['avatar'] ?>" alt="avatar" style="width:100%">
+  <img src="./image/<?php echo $data['avatar'] ?>" alt="avatar" style="width:100%">
   <h1><?php echo $data['pseudo'] ?></h1>
-  <p class="title"><a href="age.php" style="color:magenta"><?php echo $data['age'] ?></a></p>
+  <p class="title"><a href="age.php" style="color:magenta"><?php echo $data['age'] ?></a> / <a href="#"><i class="<?php echo $sexe ?>"></i></a></p>
   <p>Ma préférence: <a href="pref_1.php"><b><?php echo $data['pref_1'] ?></b></a></p> 
   <p>Mon lieu: <b><a href="lieu_1.php"><?php echo $data['lieu_1'] ?></a></b></p>
   <div style="margin: 24px 0;">
     <a href="../omdb/manipJSON.php"><i class="fa fa-search"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
+    
  </div>
  <p><button>Matching rate = <?php echo $rate ?></button></p>
 </div>

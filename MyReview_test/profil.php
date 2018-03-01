@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-include_once 'config.php';
+include_once './core/config.php';
 
-include_once 'connexion.php';
+include_once './core/connexion.php';
 
 if (isset($_COOKIE['pseudo']))
 
@@ -13,6 +13,15 @@ $query=$bdd->prepare('SELECT * FROM profils WHERE pseudo = :pseudo');
 $query->bindValue(':pseudo',$_COOKIE['pseudo'], PDO::PARAM_STR);
 $query->execute();
 $data=$query->fetch();
+
+if ($data['sexe'] == "F")
+{
+$sexe = "fa fa-venus";
+}
+
+else {
+$sexe = "fa fa-mars";
+}
 
 echo '
 <!DOCTYPE html>
@@ -64,23 +73,25 @@ button:hover, a:hover {
 <h2 style="text-align:center">Profil de ' .$data['pseudo']. '</h2>
 
 <div class="card">
-  <img src="' .$data['avatar'].'" alt="avatar" style="width:100%">
+  <img src="./image/' .$data['avatar'].'" alt="avatar" style="width:100%">
   <h1>' .$data['pseudo'].'</h1>
-  <p class="title"><a href="age2.php">' .$data['age'].'</a></p>
+  <p class="title"><a href="age2.php">' .$data['age'].'</a> / <a href="sexe.php"><i class="' .$sexe.'"></i></a></p>
   <p>Ma préférence: <a href="pref_1_v2.php"><b>' .$data['pref_1']. '</b></a></p> 
   <p>Mon lieu: <b><a href="lieu_1_v2.php">'.$data['lieu_1'].'</a></b></p>
   <div style="margin: 24px 0;">
     <a href="../omdb/manipJSON.php"><i class="fa fa-search"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
+     
  </div>
- <p><a href="SessDestroy.php"><button>Log out</button></a></p>
+ <p><a href="./core/SessDestroy.php"><button>Log out</button></a></p>
 </div>
 
 </body>
 </html>
 ';
 
+}
+
+else {
+echo "Une erreur s'est produite ! :-P";
 }
 ?>

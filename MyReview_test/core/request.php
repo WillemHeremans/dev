@@ -8,8 +8,8 @@ if (!empty($_POST)&&isset($_POST['addData'])) {
 function addData(){
 	global $bdd;
 
-	$phrase_sql = "INSERT INTO profils (pseudo, age, pref_1, pref_2, pref_3, pref_4, pref_5, lieu_1, lieu_2, lieu_3, lieu_4, lieu_5)
-    VALUES (:pseudo, :age, :pref_1, :pref_2, :pref_3, :pref_4, :pref_5, :lieu_1, :lieu_2, :lieu_3, :lieu_4, :lieu_5)";
+	$phrase_sql = "INSERT INTO profils (pseudo, age, pref_1, pref_2, pref_3, pref_4, pref_5, lieu_1, lieu_2, lieu_3, lieu_4, lieu_5, avatar, sexe)
+    VALUES (:pseudo, :age, :pref_1, :pref_2, :pref_3, :pref_4, :pref_5, :lieu_1, :lieu_2, :lieu_3, :lieu_4, :lieu_5, :avatar, :sexe)";
 	$preparation = $bdd->prepare($phrase_sql);
 
 	$preparation->bindParam(':pseudo',$_POST['pseudo'],PDO::PARAM_STR);
@@ -24,6 +24,8 @@ function addData(){
         $preparation->bindParam(':lieu_3',$_POST['lieu_3'],PDO::PARAM_STR);
         $preparation->bindParam(':lieu_4',$_POST['lieu_4'],PDO::PARAM_STR);
         $preparation->bindParam(':lieu_5',$_POST['lieu_5'],PDO::PARAM_STR);
+        $preparation->bindParam(':avatar',$_POST['avatar'],PDO::PARAM_STR);
+        $preparation->bindParam(':sexe',$_POST['sexe'],PDO::PARAM_STR);
 
 
 	if ($preparation->execute()) {
