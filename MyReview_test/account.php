@@ -89,7 +89,7 @@ else echo
 <option disabled selected value> -- Select an option -- </option>
   <option value="L\'ambiance">L\'ambiance</option>
   <option value="Le service">Le service</option>
-  <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
+  <option value="Éco-responsable">Éco-responsable (bio, proximité, etc)</option>
   <option value="La rapidité">La rapidité</option>
   <option value="Type de cuisine">Type de cuisine</option>
 </select>
@@ -101,7 +101,7 @@ else echo
 <option disabled selected value> -- Select an option -- </option>
   <option value="L\'ambiance">L\'ambiance</option>
   <option value="Le service">Le service</option>
-  <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
+  <option value="Éco-responsable">Éco-responsable (bio, proximité, etc)</option>
   <option value="La rapidité">La rapidité</option>
   <option value="Type de cuisine">Type de cuisine</option>
 </select>
@@ -113,7 +113,7 @@ else echo
 <option disabled selected value> -- Select an option -- </option>
   <option value="L\'ambiance">L\'ambiance</option>
   <option value="Le service">Le service</option>
-  <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
+  <option value="Éco-responsable">Éco-responsable (bio, proximité, etc)</option>
   <option value="La rapidité">La rapidité</option>
   <option value="Type de cuisine">Type de cuisine</option>
 </select>
@@ -125,7 +125,7 @@ else echo
 <option disabled selected value> -- Select an option -- </option>
   <option value="L\'ambiance">L\'ambiance</option>
   <option value="Le service">Le service</option>
-  <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
+  <option value="Éco-responsable">Éco-responsable (bio, proximité, etc)</option>
   <option value="La rapidité">La rapidité</option>
   <option value="Type de cuisine">Type de cuisine</option>
 </select>
@@ -137,7 +137,7 @@ else echo
 <option disabled selected value> -- Select an option -- </option>
   <option value="L\'ambiance">L\'ambiance</option>
   <option value="Le service">Le service</option>
-  <option value="Responsable ( bio, proximité, etc)">Responsable ( bio, proximité, etc)</option>
+  <option value="Éco-responsable">Éco-responsable (bio, proximité, etc)</option>
   <option value="La rapidité">La rapidité</option>
   <option value="Type de cuisine">Type de cuisine</option>
 </select>
@@ -151,10 +151,10 @@ else echo
 
 <select name="lieu_1" form="Pref" id="Lieu_1">
 <option disabled selected value> -- Select an option -- </option>
-  <option value="Cuisine du monde (asiatique,...)">Cuisine du monde (asiatique,...)</option>
+  <option value="Cuisine du monde">Cuisine du monde (asiatique,...)</option>
   <option value="Brasserie">Brasserie</option>
-  <option value="BIO (exki...)">BIO (exki...)</option>
-  <option value="Fast food (quick...)">Fast food (quick...)</option>
+  <option value="BIO">BIO (exki...)</option>
+  <option value="Fast food">Fast food (quick...)</option>
   <option value="Gastronomique">Gastronomique</option>
 </select>
 <br />
@@ -163,10 +163,10 @@ else echo
 
 <select name="lieu_2" form="Pref" id="Lieu_2">
 <option disabled selected value> -- Select an option -- </option>
-  <option value="Cuisine du monde (asiatique,...)">Cuisine du monde (asiatique,...)</option>
+  <option value="Cuisine du monde">Cuisine du monde (asiatique,...)</option>
   <option value="Brasserie">Brasserie</option>
-  <option value="BIO (exki...)">BIO (exki...)</option>
-  <option value="Fast food (quick...)">Fast food (quick...)</option>
+  <option value="BIO">BIO (exki...)</option>
+  <option value="Fast food">Fast food (quick...)</option>
   <option value="Gastronomique">Gastronomique</option>
 </select>
 <br />
@@ -175,10 +175,10 @@ else echo
 
 <select name="lieu_3" form="Pref" id="Lieu_3">
 <option disabled selected value> -- Select an option -- </option>
-  <option value="Cuisine du monde (asiatique,...)">Cuisine du monde (asiatique,...)</option>
+  <option value="Cuisine du monde">Cuisine du monde (asiatique,...)</option>
   <option value="Brasserie">Brasserie</option>
-  <option value="BIO (exki...)">BIO (exki...)</option>
-  <option value="Fast food (quick...)">Fast food (quick...)</option>
+  <option value="BIO">BIO (exki...)</option>
+  <option value="Fast food">Fast food (quick...)</option>
   <option value="Gastronomique">Gastronomique</option>
 </select>
 <br />
@@ -187,10 +187,10 @@ else echo
 
 <select name="lieu_4" form="Pref" id="Lieu_4">
 <option disabled selected value> -- Select an option -- </option>
-  <option value="Cuisine du monde (asiatique,...)">Cuisine du monde (asiatique,...)</option>
+  <option value="Cuisine du monde">Cuisine du monde (asiatique,...)</option>
   <option value="Brasserie">Brasserie</option>
-  <option value="BIO (exki...)">BIO (exki...)</option>
-  <option value="Fast food (quick...)">Fast food (quick...)</option>
+  <option value="BIO">BIO (exki...)</option>
+  <option value="Fast food">Fast food (quick...)</option>
   <option value="Gastronomique">Gastronomique</option>
 </select>
 <br />
@@ -199,10 +199,10 @@ else echo
 
 <select name="lieu_5" form="Pref" id="Lieu_5">
 <option disabled selected value> -- Select an option -- </option>
-  <option value="Cuisine du monde (asiatique,...)">Cuisine du monde (asiatique,...)</option>
+  <option value="Cuisine du monde">Cuisine du monde (asiatique,...)</option>
   <option value="Brasserie">Brasserie</option>
-  <option value="BIO (exki...)">BIO (exki...)</option>
-  <option value="Fast food (quick...)">Fast food (quick...)</option>
+  <option value="BIO">BIO (exki...)</option>
+  <option value="Fast food">Fast food (quick...)</option>
   <option value="Gastronomique">Gastronomique</option>
 </select>
 <br />

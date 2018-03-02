@@ -23,6 +23,27 @@ else {
 $sexe = "fa fa-mars";
 }
 
+if ($data['lieu_1'] == "Cuisine du monde") 
+{
+$pub = "asian.png";
+}
+else if ($data['lieu_1'] == "Fast food") 
+{
+$pub = "bking.jpeg";
+}
+else if ($data['lieu_1'] == "BIO") 
+{
+$pub = "exki.png";
+}
+else if ($data['lieu_1'] == "Brasserie") 
+{
+$pub = "stella.jpeg";
+}
+else if ($data['lieu_1'] == "Gastronomique") 
+{
+$pub = "gastronomique.jpg";
+}
+
 echo '
 <!DOCTYPE html>
 <html>
@@ -66,6 +87,49 @@ a {
 button:hover, a:hover {
   opacity: 0.7;
 }
+
+.container
+{
+text-align:center;
+}
+.center
+{
+margin-left:auto;
+margin-right:auto;
+padding-top:10px;
+width:770px;
+background-color:#ffffff;
+text-align:left;
+padding-bottom:10px;
+}
+
+.image_container3
+{
+float:left;
+margin-left:auto;
+margin-right:auto;
+width:728px;
+margin-bottom:10px;
+padding:10px;
+padding-top:0px;
+text-align:center;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+img.pub {
+    animation: blink 10s;
+    animation-iteration-count: infinite;
+}
 </style>
 </head>
 <body>
@@ -83,6 +147,17 @@ button:hover, a:hover {
      
  </div>
  <p><a href="./core/SessDestroy.php"><button>Log out</button></a></p>
+</div>
+
+<br><br>
+<div class="container">
+<div class="center">
+<div class="image_container3">
+
+<img class="pub" src="./image/'.$pub.'" width="100%" height="200" alt="publicité" />
+<br><br>
+</div>
+</div>
 </div>
 
 </body>

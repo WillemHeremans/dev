@@ -119,11 +119,11 @@ button:hover, a:hover {
 <h2 style="text-align:center">Match avec <?php echo $data['pseudo'] ?></h2>
 
 <div class="card" style="<?php echo $gold ?>">
-  <img src="./image/<?php echo $data['avatar'] ?>" alt="avatar" style="width:100%">
+  <img src="./image/<?php echo $data['avatar'] ?>" alt="avatar" style="width:100%;height:300px;">
   <h1><?php echo $data['pseudo'] ?></h1>
-  <p class="title"><a href="age.php"><?php echo $data['age'] ?></a> / <a href="#" style="color:magenta"><i class="<?php echo $sexe ?>"></i></a></p>
-  <p>Ma préférence: <a href="pref_1.php"><b><?php echo $data['pref_1'] ?></b></a></p> 
-  <p>Mon lieu: <b><a href="lieu_1.php"><?php echo $data['lieu_1'] ?></a></b></p>
+  <p class="title"><a href="./old/age.php"><?php echo $data['age'] ?></a> / <a href="#" style="color:magenta"><i class="<?php echo $sexe ?>"></i></a></p>
+  <p>Ma préférence: <a href="./old/pref_1.php"><b><?php echo $data['pref_1'] ?></b></a></p> 
+  <p>Mon lieu: <b><a href="./old/lieu_1.php"><?php echo $data['lieu_1'] ?></a></b></p>
   <div style="margin: 24px 0;">
     <a href="../omdb/manipJSON.php"><i class="fa fa-search"></i></a> 
     
