@@ -1,6 +1,6 @@
 <?php
-session_start();
-if (isset ($_COOKIE['pseudo']) || isset ($_COOKIE['pswd']))
+
+if (isset ($_COOKIE['pseudo']))
 
 {
 
@@ -8,8 +8,8 @@ setcookie('pseudo', '', -1);
 setcookie('age', '', -1);
 setcookie('pref', '', -1);
 setcookie('lieu', '', -1);
-
+setcookie('sexe', '', -1);
 }
 session_destroy();
-header('Location: ../login.php');
+header('Location: login.php');
 ?>

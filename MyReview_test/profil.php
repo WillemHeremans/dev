@@ -146,7 +146,7 @@ img.pub {
     <a href="../omdb/manipJSON.php"><i class="fa fa-search"></i></a> 
      
  </div>
- <p><a href="./core/SessDestroy.php"><button>Log out</button></a></p>
+ <p><a href="SessDestroy.php"><button>Log out</button></a></p>
 </div>
 
 <br><br>
