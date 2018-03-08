@@ -18,6 +18,17 @@ $data=$query->fetchAll( PDO::FETCH_ASSOC );
 }
 ?>
 <?php include 'head.php';?>
+
+<?php
+
+echo '<header>
+
+    <a href="?100"><button style="width:25%;">Match à 100%</button></a><a href="?75"><button style="width:25%;">Match à 75%</button></a><a href="?50"><button style="width:25%;">Match à 50%</button></a><a href="?all"><button style="width:25%;">Tous</button></a>
+</header>';
+
+
+?>
+
 <?php foreach($data as $data): ?>
 <?php
  
@@ -26,6 +37,7 @@ if($data['age'] == $_COOKIE['age'] && $data['lieu_1'] == $_COOKIE['lieu'] && $da
 {
 $rate = "100%";
 $gold = "border: 5px solid gold;";
+$classButton = "cent";
 }
 
 else if (($data['age'] == $_COOKIE['age'] && $data['lieu_1'] == $_COOKIE['lieu']) || ($data['age'] == $_COOKIE['age'] && $data['sexe'] == $_COOKIE['sexe']) || ($data['sexe'] == $_COOKIE['sexe'] && $data['lieu_1'] == $_COOKIE['lieu']))
@@ -33,6 +45,7 @@ else if (($data['age'] == $_COOKIE['age'] && $data['lieu_1'] == $_COOKIE['lieu']
 {
 $rate = "75%";
 $gold = "border: none;";
+$classButton = "septante";
 }
 
 else if ($data['age'] == $_COOKIE['age'] || $data['lieu_1'] == $_COOKIE['lieu'] ||  $data['sexe'] == $_COOKIE['sexe'])
@@ -40,15 +53,47 @@ else if ($data['age'] == $_COOKIE['age'] || $data['lieu_1'] == $_COOKIE['lieu'] 
 {
 $rate = "50%";
 $gold = "border: none;";
+$classButton = "cinquante";
 }
 
 
 else {
 $rate = "25%";
 $gold = "border: none;";
+$classButton = "vingt";
 }
 
+?>
 
+<?php
+
+if (isset($_GET['100']) && ($classButton == "septante" || $classButton == "cinquante" || $classButton == "vingt")) {
+ 
+$display = "none";
+
+}
+
+else if (isset($_GET['75']) && ($classButton == "cent" || $classButton == "cinquante" || $classButton == "vingt")) {
+ 
+$display = "none";
+
+}
+
+else if (isset($_GET['50']) && ($classButton == "cent" || $classButton == "septante" || $classButton == "vingt")) {
+ 
+$display = "none";
+
+}
+
+else if (isset($_GET['all'])) {
+ 
+$display = "inline-block";
+
+}
+
+else {
+$display = "inline-block";
+}
 
 ?>
 
@@ -114,7 +159,7 @@ button:hover, a:hover {
 </head>
 <body>
 
-<div style="display:inline-block; max-width:300px; min-width:300px;">
+<div id="<?php echo $classButton ?>" style="display: <?php echo $display ?>; max-width:300px; min-width:300px;">
 
 <h2 style="text-align:center">Match avec <?php echo $data['pseudo'] ?></h2>
 

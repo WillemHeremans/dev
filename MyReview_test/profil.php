@@ -167,6 +167,22 @@ img.pub {
 }
 
 else {
-echo "Une erreur s'est produite ! :-P";
+echo '<!DOCTYPE html>
+<html>
+<head>
+<title>Connectez-vous !</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8"/>
+<style>
+
+</style>
+</head>
+<body>
+<br />
+<br />
+<h1 style="text-align:center;">Pour voir votre profil, <a href="login.php">connectez-vous!</a></h1>
+</body>
+</html>
+';
 }
 ?>
