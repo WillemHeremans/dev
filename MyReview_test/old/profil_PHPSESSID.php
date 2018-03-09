@@ -5,22 +5,22 @@ include_once './core/config.php';
 
 include_once './core/connexion.php';
 
-if (isset($_COOKIE['pseudo']))
+if (isset($_SESSION['pseudo']))
 
 {
 
 $query=$bdd->prepare('SELECT * FROM profils WHERE pseudo = :pseudo');
-$query->bindValue(':pseudo',$_COOKIE['pseudo'], PDO::PARAM_STR);
+$query->bindValue(':pseudo',$_SESSION['pseudo'], PDO::PARAM_STR);
 $query->execute();
 $data=$query->fetch();
 
-if ($data['gender'] == "female")
+if ($data['sexe'] == "F")
 {
-$gender = "fa fa-venus";
+$sexe = "fa fa-venus";
 }
 
 else {
-$gender = "fa fa-mars";
+$sexe = "fa fa-mars";
 }
 
 if ($data['lieu_1'] == "Cuisine du monde") 
@@ -139,7 +139,7 @@ img.pub {
 <div class="card">
   <img src="./image/' .$data['avatar'].'" alt="avatar" style="width:100%">
   <h1>' .$data['pseudo'].'</h1>
-  <p class="title"><a href="age2.php">' .$data['age'].'</a> / <a href="gender.php"><i class="' .$gender.'"></i></a></p>
+  <p class="title"><a href="age2.php">' .$data['age'].'</a> / <a href="sexe.php"><i class="' .$sexe.'"></i></a></p>
   <p>Ma préférence: <a href="pref_1_v2.php"><b>' .$data['pref_1']. '</b></a></p> 
   <p>Mon lieu: <b><a href="lieu_1_v2.php">'.$data['lieu_1'].'</a></b></p>
   <div style="margin: 24px 0;">
@@ -186,4 +186,3 @@ echo '<!DOCTYPE html>
 ';
 }
 ?>
-

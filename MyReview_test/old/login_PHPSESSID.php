@@ -9,17 +9,44 @@ include_once './core/config.php';
 include_once './core/connexion.php';
 
 
-if (isset($_COOKIE['pseudo'])) {
 
-header("Location: profil.php");
+if (!empty($_POST) && isset($_POST['pseudo'])) {
 
+$query=$bdd->prepare('SELECT * FROM profils WHERE pseudo = :pseudo');
+
+        $query->bindValue(':pseudo',$_POST['pseudo'], PDO::PARAM_STR);
+
+        $query->execute();
+
+        $data=$query->fetch();
+
+    if ($data['pseudo'] == $_POST['pseudo'])
+
+    {
+
+	$_SESSION['pseudo'] = $data['pseudo'];
+	$_SESSION['age'] = $data['age'];
+	$_SESSION['pref'] = $data['pref_1'];
+	$_SESSION['lieu'] = $data['lieu_1'];
+        header("Location: profil.php");
+
+    }
+
+#else if ($data['pseudo'] != $_POST['pseudo']) {
+#$nonnon = '<span style="color:red;">Ce pseudo n\'existe pas ! </span>';
+#}
+	
 }
 
-else {
+var_dump($_SESSION['pseudo']);
+var_dump($_SESSION['age']);
+var_dump($_SESSION['pref']);
+var_dump($_SESSION['lieu']);
 
-echo 
 
-'<!DOCTYPE html>
+
+
+echo '<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -191,55 +218,21 @@ window.onclick = function(event) {
 </body>
 </html>';
 
-}
 
-if (!empty($_POST) && isset($_POST['pseudo'])) {
+#if (isset($_POST['souvenir']))
 
+#{
 
+#$expire = time() + 365*24*3600;
 
-$query=$bdd->prepare('SELECT * FROM profils WHERE pseudo = :pseudo');
-
-        $query->bindValue(':pseudo',$_POST['pseudo'], PDO::PARAM_STR);
-
-        $query->execute();
-
-        $data=$query->fetch();
-
-    if ($data['pseudo'] == $_POST['pseudo'])
-
-    {
-
-	#$_SESSION['pseudo'] = $data['pseudo'];
-        header("Location: profil.php");
-
-}
-
-else if ($data['pseudo'] != $_POST['pseudo']) {
-echo '<span style="color:red;">Ce pseudo n\'existe pas ! </span>';
-}
-	
-}
-
-#var_dump($_SESSION['pseudo']);
+#setcookie('pseudo', $_SESSION['pseudo'], $expire);
+#setcookie('age', $data['age'], $expire);
+#setcookie('sexe', $data['sexe'], $expire); 
+#setcookie('pref', $data['pref_1'], $expire);
+#setcookie('lieu', $data['lieu_1'], $expire);
 
 
-
-
-if (isset($_POST['souvenir']))
-
-{
-
-$expire = time() + 365*24*3600;
-
-setcookie('pseudo', $data['pseudo'], $expire);
-setcookie('age', $data['age'], $expire);
-setcookie('gender', $data['gender'], $expire); 
-setcookie('pref', $data['pref_1'], $expire);
-setcookie('lieu', $data['lieu_1'], $expire);
-
-
-}
+#}
 
 ?>
-
 
