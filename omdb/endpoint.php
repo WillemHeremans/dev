@@ -54,6 +54,16 @@ echo '<p style="text-align:center;"><img src="'.$characters->Poster.'" alt="Pas 
 
 echo "<br>";
 
+echo '<p style="text-align:center;">Rating: '.$characters->imdbRating.'</p> <br>';
+
+echo '<p style="text-align:center;"><progress value="'.$characters->imdbRating.'" max="10"></progress></p>';
+
+
+
+#$bla = print_r($characters->Ratings[0]->Source);
+
+#echo ($bla);
+
 #echo implode($ratings);;
 
 #echo "<br>";

@@ -12,6 +12,7 @@
   <form class="form-wrapper cf" action="endpoint.php" method="get" target="_blank">
 
       <input type="text" placeholder="Entrez un titre de film..." name="t" id="title">
+      <input type="hidden" name="plot" value="full">
       <input type="hidden" name="apikey" value="b9957574">
     
       <button type="submit">Chercher</button>
