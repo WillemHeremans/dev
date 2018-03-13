@@ -41,6 +41,15 @@ $data = file_get_contents($url); // put the contents of the file into a variable
 $characters = json_decode($data); // decode the JSON feed
 #$ratings = $characters->Ratings;
 
+if ($characters->Response == 'False') {
+
+echo "<br>";
+echo "<br>";
+echo '<h1 style="text-align:center;">Aucun résultat!</h1>';
+
+}
+
+else {
 
 echo '<h1>'. $characters->Title .'</h1>';
 echo "<br>";
@@ -57,6 +66,12 @@ echo "<br>";
 echo '<p style="text-align:center;">Rating: '.$characters->imdbRating.'</p> <br>';
 
 echo '<p style="text-align:center;"><progress value="'.$characters->imdbRating.'" max="10"></progress></p>';
+
+echo "<br>";
+
+}
+
+#echo $characters->Response;
 
 
 

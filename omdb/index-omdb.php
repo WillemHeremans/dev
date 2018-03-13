@@ -19,11 +19,13 @@
 
   </form>
 
-<form class="form-wrapper cf" action="http://www.omdbapi.com/" method="get" target="_blank">
+<form class="form-wrapper cf" action="endpoint-global-search.php" method="get" target="_blank">
 
       <input type="text" placeholder="Entrez un titre de film..." name="s">
 	<input type="hidden" name="type" value="movie">
+	
       <input type="hidden" name="apikey" value="b9957574">
+      
     
       <button type="submit">Chercher</button>
 
