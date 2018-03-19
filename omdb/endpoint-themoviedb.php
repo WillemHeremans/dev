@@ -30,8 +30,17 @@ button:hover, a:hover {
 
 display:inline-block;
 margin:auto;
+animation-name: fromRight;
+animation-timing-function: ease-in-out;
+animation-duration: 1.5s;
 
 }
+
+@keyframes fromRight {
+    from {margin-top: -500px;}
+    to {margin-top: 0px;}
+}
+	
 	</style>
   <title>Recherche via The movie db</title>
 </head>
@@ -106,7 +115,7 @@ $url = $genre.$myurl["query"]; // path to your JSON file
 $data = file_get_contents($url); // put the contents of the file into a variable
 $characters = json_decode($data); // decode the JSON feed
 
-	echo '<header>
+	echo '<header style="position:relative;">
     <a href="?Action&language=fr-FR&api_key=2844cf5c3df9481565054c3a1ac78115"><button style="width:25%;">Action</button></a><a href="?Comédie&language=fr-FR&api_key=2844cf5c3df9481565054c3a1ac78115"><button style="width:25%;">Comédie</button></a><a href="?Drame&language=fr-FR&api_key=2844cf5c3df9481565054c3a1ac78115"><button style="width:25%;">Drame</button></a><a href="?Horreur&language=fr-FR&api_key=2844cf5c3df9481565054c3a1ac78115"><button style="width:25%;">Horreur</button></a>
 </header>';
 
