@@ -220,11 +220,6 @@ echo '<span style="color:red;">Ce pseudo n\'existe pas ! </span>';
 	
 }
 
-#var_dump($_SESSION['pseudo']);
-
-
-
-
 if (isset($_POST['souvenir']))
 
 {
