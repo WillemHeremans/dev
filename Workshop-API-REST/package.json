@@ -1,0 +1,35 @@
+{
+  "name": "workshop-api-rest",
+  "version": "1.0.0",
+  "description": "Création d'une API ",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/danieldevos/Workshop-API-REST.git",
+    "type": "git"
+  },
+  "scripts": {
+    "start": "SERVER_PORT=6789 TOKEN=12345 backpack",
+    "build": "backpack build",
+    "test": "NODE_ENV=test TOKEN=12345 jest"
+  },
+  "keywords": [
+    "node.js",
+    "javascript",
+    "es6+"
+  ],
+  "author": "Daniel De Vos",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-stage-3": "^6.24.1",
+    "backpack-core": "^0.7.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "lodash": "^4.17.5",
+    "mongoose": "^5.0.10",
+    "save": "^2.3.2"
+  },
+  "devDependencies": {
+    "jest": "^22.4.2",
+    "supertest": "^3.0.0"
+  }
+}
