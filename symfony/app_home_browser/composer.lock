@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47bdd3caef5f4eb18bbc251504497083",
+    "content-hash": "d10b981ae0fc084bf1737030e8b2a94f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1784,7 +1784,7 @@
         },
         {
             "name": "symfony/asset",
-            "version": "v3.4.8",
+            "version": "v3.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/asset.git",
@@ -5329,16 +5329,16 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.4.2",
+            "version": "v1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "8713152f523b337177163a328485ea6a39fae7ad"
+                "reference": "45fe88c2260f95b20d161dba94b488181180188f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/8713152f523b337177163a328485ea6a39fae7ad",
-                "reference": "8713152f523b337177163a328485ea6a39fae7ad",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/45fe88c2260f95b20d161dba94b488181180188f",
+                "reference": "45fe88c2260f95b20d161dba94b488181180188f",
                 "shasum": ""
             },
             "require": {
@@ -5390,7 +5390,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2018-04-19T17:28:47+00:00"
+            "time": "2018-04-22T00:44:55+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",

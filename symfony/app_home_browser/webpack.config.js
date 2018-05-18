@@ -7,6 +7,10 @@ Encore
     .setPublicPath('/build')
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
+    
+    // will create public/build/app.js and public/build/app.css
+    .addEntry('app', './assets/app.js')
+    
     // uncomment to create hashed filenames (e.g. app.abc123.css)
     // .enableVersioning(Encore.isProduction())
 
