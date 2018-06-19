@@ -86,14 +86,14 @@ alert("Bravo!")
 var alea = Math.round(Math.random() * 100);
 var resp = prompt("Veuillez deviner un nombre entre 0 et 100");
 
-for (i = 0; i < 10; i++;) {
+for (i = 0; i < 10; i++) {
 
 if (alea < resp) {
-alert("plus grand")
+alert("essayez plus petit")
 }
 
 else if (alea > resp) {
-alert("plus petit")
+alert("essayez plus grand")
 } 
 
 else if (alea == resp) {
